@@ -1,0 +1,95 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: royalblue;
+      font-family: poppins, sans-serif;
+}
+.header-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100px;
+    margin-bottom: 6rem;
+}
+.logo{
+    margin-left: 8rem;
+}
+.nav-links ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+     font-size: 20px;
+    font-weight: bold;
+     gap: 50px;
+}
+.nav-links a:hover,
+.active{
+    color: royalblue;
+}
+
+.header-button{
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: #fc9440;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-right: 8rem;
+}
+.header-button:hover{
+    background-color: black;
+    
+}
+.report-found{
+    max-width: 500px;
+    margin: auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+}
+.report-found{
+    margin-bottom: 400px;
+}
+.report-found h2{
+    text-align: center;
+    color: #2a9d8f;
+}
+.form-group{
+    margin-bottom: 2rem;
+}
+label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+input,select,textarea{
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button{
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #2a9d8f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #21867a;
+}
+#formMessage{
+    text-align: center;
+    margin-top: 1rem;
+    color: green;
+}

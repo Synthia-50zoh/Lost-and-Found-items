@@ -3,12 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOST FORM</title>
+    <title>REPORTLOST FORM</title>
+    <link rel="stylesheet" href="lost.css">
 </head>
 <body>
-    <form>
-        
-    </form>
-    
+    <header>
+        <nav>
+            <div class="header-container">
+                <div class="logo">
+                    <a href="#">
+                    </a><img src="images/logo images.png" height="80px" width="80px">
+                 </a>
+                </div>
+                <div  class="nav-links">
+                    <ul>
+                        <li>  <a href="index.html" class="active">Home</a></li>
+                        <li> <a href="reportloss.html">Report Lost</a></li>
+                        <li> <a href="reportfound.html">Report Found</a></li>
+                </ul>
+                </div>
+                    <a href="signout.html" class="header-button">Sign out</a>
+            </div>
+        </nav>
+    </header>
+    <section class="lost-search-section">
+  <h2>Search Lost Items</h2>
+  <form id="lostSearchForm">
+
+    <label for="itemName">Item Name</label>
+    <input type="text" id="itemName" name="itemName" placeholder="e.g. an hp laptop">
+
+    <label for="category">Category</label>
+    <select id="category" name="category">
+      <option value="">All Categories</option>
+      <option>Phone</option>
+      <option>Bag</option>
+      <option>Wallet</option>
+      <option>Keys</option>
+    </select>
+
+    <label for="date">Date Lost (optional)</label>
+    <input type="date" id="date" name="date">
+
+    <label for="location">Lost Location (optional)</label>
+    <input type="text" id="location" name="location" placeholder="e.g. Library, Cafeteria">
+
+    <button type="submit">Search</button>
+  </form>
+</section>
 </body>
 </html>

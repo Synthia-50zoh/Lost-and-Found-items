@@ -1,0 +1,106 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: royalblue;
+      font-family: poppins, sans-serif;
+}
+.header-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100px;
+    margin-bottom: 5rem;
+}
+.logo{
+    margin-left: 8rem;
+}
+.nav-links ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+     font-size: 20px;
+    font-weight: bold;
+     gap: 50px;
+}
+
+
+.nav-links a:hover,
+.active{
+    color: royalblue;
+}
+
+.header-button{
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: #fc9440;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-right: 8rem;
+}
+.header-button:hover{
+    background-color: black;
+
+}
+.found-search-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.found-search-section h2 {
+  text-align: center;
+  color: #2a9d8f;
+  margin-bottom: 1.5rem;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+form input,
+form select {
+width:100%;
+padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #2a9d8f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #21867a;
+}
+@media (max-width: 500px) {
+  .found-search-section {
+    padding: 1rem;
+  }
+
+  form button {
+    font-size: 1.1rem;
+  }
+}
+

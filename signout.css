@@ -1,0 +1,132 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: royalblue;
+    font-family: poppins, sans-serif;
+}
+.header-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100px;
+}
+.logo{
+    margin-left: 8rem;
+}
+.nav-links ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+     font-size: 20px;
+    font-weight: bold;
+     gap: 50px;
+}
+
+.nav-links a:hover,
+.active{
+    color: royalblue;
+}
+
+.header-button{
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: #fc9440;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-right: 8rem;
+}
+.header-button:hover{
+    background-color: black;
+}
+.signout-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.signout-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.signout-box h2 {
+  margin-bottom: 0.8rem;
+  color: #264653;
+}
+
+.signout-box p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom:1rem;
+}
+form label{
+      display: block;
+  text-align: left;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.signout-btn,
+.cancel-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.signout-btn {
+  background: #e76f51;
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.cancel-btn {
+  background: #bcbcbc;
+  color: #333;
+}
+
+.signout-btn:hover {
+  background: #d65a3c;
+}
+
+.cancel-btn:hover {
+  background: #a3a3a3;
+}
+
+@media (max-width: 500px) {
+  .signout-box {
+    padding: 1.2rem;
+  }
+
+  .signout-btn, .cancel-btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}

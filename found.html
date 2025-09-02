@@ -4,8 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOUND FORM</title>
+    <link rel="stylesheet" href="found.css">
 </head>
 <body>
-    
+     <header>
+        <nav>
+            <div class="header-container">
+                <div class="logo">
+                    <a href="#">
+                    </a><img src="images/logo images.png" height="80px" width="80px">
+                 </a>
+                </div>
+                <div  class="nav-links">
+                    <ul>
+                        <li>  <a href="index.html" class="active">Home</a></li>
+                        <li> <a href="reportloss.html">Report Lost</a></li>
+                        <li> <a href="reportfound.html">Report Found</a></li>
+                </ul>
+                </div>
+                    <a href="index.html" class="header-button">Sign out</a>
+            </div>
+        </nav>
+    </header>
+    <section class="found-search-section">
+  <h2>Search Found Items</h2>
+  <form id="foundSearchForm">
+
+    <label for="itemName">Item Name</label>
+    <input type="text" id="itemName" name="itemName" placeholder="e.g. Black wallet">
+
+    <label for="category">Category</label>
+    <select id="category" name="category">
+      <option value="">All Categories</option>
+      <option>Phone</option>
+      <option>Bag</option>
+      <option>Wallet</option>
+      <option>Keys</option>
+    </select>
+
+    <label for="date">Date Found (optional)</label>
+    <input type="date" id="date" name="date">
+
+    <button type="submit">Search</button>
+  </form>
+</section>
 </body>
 </html>

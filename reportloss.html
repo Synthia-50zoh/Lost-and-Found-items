@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOST FORM</title>
+    <link rel="stylesheet" href="reportloss.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="header-container">
+                <div class="logo">
+                    <a href="#">
+                    </a><img src="images/logo images.png" height="80px" width="80px">
+                 </a>
+                </div>
+                <div  class="nav-links">
+                    <ul>
+                        <li>  <a href="index.html" class="active">Home</a></li>
+                        <li> <a href="reportloss.html">Report Lost</a></li>
+                        <li> <a href="reportfound.html">Report Found</a></li>
+                </ul>
+                </div>
+                    <a href="signout.html" class="header-button">Sign out</a>
+            </div>
+        </nav>
+    </header>
+
+<section class="lost-subheader">
+
+        <h2 class="lost-subheader">Lost Something?</h2>
+        <p class="lost-subheader">Use our smart search system to browse all reported items.Whether it`s your wallet, keys,or devices-your 
+            path to recovery starts here.
+        </p>
+        </section>
+
+        <section class="lost-image">
+             <div>
+            <img src="images/handbag.jpeg.jpeg" width="300px" height="300px">
+            <div  class="image-button">
+            <button>View More</button>
+            </div>
+           </div>
+           <div>
+              <img src="images/paino.jpeg.jpeg" width="300px" height="300px">
+               <div  class="image-button">
+              <button>View More</button>
+            </div>
+            </div>
+              <div >
+              <img src="images/destop.jpeg.jpeg" width="300px" height="300px">
+               <div class="image-button">
+               <button>View More</button>
+            </div>
+          </div>
+        </section>
+
+
+ <section class="lost-page">
+        <h1>Missing Items</h1>
+  <form class="lost-form">
+     <i class="fa-solid fa-user"></i>
+    <input type="text" placeholder="Item name" required>
+    <textarea placeholder="Describe the item..." required></textarea>
+    <input type="date" required>
+    <input type="text" placeholder="Last known location" required>
+    <input type="file" accept="image/*">
+    <button class="btn-form" type="submit">Submit Report </button>
+  </form>
+
+  <div class="search-section">
+    <h2>Search FoundItems</h2>
+    <input type="text" placeholder="Search by name or keyword">
+    <button class="btn-form">Search</button>
+  </div>
+    </section>
+     </body>
+     </html>

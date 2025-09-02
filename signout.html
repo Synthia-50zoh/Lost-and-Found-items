@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGNOUT FORM</title>
+    <link rel="stylesheet" href="signout.css">
 </head>
 <body>
+     <header>
+        <nav>
+            <div class="header-container">
+                <div class="logo">
+                    <a href="#">
+                    </a><img src="images/logo images.png" height="80px" width="80px">
+                 </a>
+                </div>
+                <div  class="nav-links">
+                    <ul>
+                        <li>  <a href="index.html" class="active">Home</a></li>
+                        <li> <a href="reportloss.html">Report Lost</a></li>
+                        <li> <a href="reportfound.html">Report Found</a></li>
+                </ul>
+                </div>
+                  <a href="signout.html" class="header-button">Sign out</a>
+            </div>
+        </nav>
+    </header>
+    <section class="signout-page">
+  <div class="signout-box">
+    <h2>Sign Out</h2>
+    <p>We're sorry to see you go. Let us know why you're signing out (optional):</p>
     
+    <form id="signoutForm" action="signout.php" method="POST">
+      <label for="feedback">Your Comment</label>
+      <textarea id="feedback" name="feedback" rows="4" placeholder="e.g. Just done for today..."></textarea>
+
+      <button type="submit" class="signout-btn">Sign Out</button>
+      <a href="dashboard.html" class="cancel-btn">Cancel</a>
+    </form>
+  </div>
+</section>
 </body>
 </html>

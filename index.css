@@ -1,11 +1,7 @@
 
-*{
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-body {
     background-color: royalblue;
       font-family: poppins, sans-serif;
 }
@@ -19,6 +15,7 @@ body {
     justify-content: space-between;
     width: 100vw;
     height: 100px;
+    margin-bottom: 5rem;
 }
 .logo{
     margin-left: 8rem;
@@ -57,8 +54,9 @@ body {
     height: 70vh;
     display: flex;
     flex-direction: row;
-    margin-bottom: 50px;
-    padding-top: 12rem;
+     margin-bottom: 40px;
+     padding-top: 16rem;
+
     
 }
 h1{
@@ -94,34 +92,66 @@ h1{
     font-size: 20px;
     font-weight: bolder;
     margin-left: 16rem;
+    margin-top: 100px;
      width: 200px;
        height: 75px;
        border: none;
        border-radius: 10px;
 }
-.lost{
-    background-color:  #fc9440;
+a .lost-button {
+    width: 200px;
+    height: 75px;
+    margin-bottom: 20px;
 }
-.lost:hover{
+.lost-button{
+    background-color:  #fc9440;
+    margin-left: 260px;
+    padding: 25px 80px;
+    border-radius: 10px;
+     font-size: 22px;
+     font-weight: bold;
+     color: white;
+}
+.lost-button:hover{
     background-color: rgb(57, 161, 161);
     cursor: pointer;
+     color: white;
 }
-.found{
+      
+ .found-button{
     background-color: green;
+    margin-left: 100px;
+    padding: 25px 80px;
+    border-radius: 10px;
+    margin-bottom: 300px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    
 }
-.found:hover{
+.found-button:hover{
      background-color: royalblue;
     cursor: pointer;
+    color: white;
+     margin-top: 4rem;
 }
 .image{
       margin-left: 10rem;
-          padding: 3rem;
+     padding: 3rem;
+     transition:transform 0.1s,;
+     margin-top: 10rem;
+}
+
+.image:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(red, green, blue, alpha);
+    margin-top: 10rem;
 }
 .welcome-section{
     height: 70vh;
     display: flex;
     flex-direction: column;
-    padding-top: 1rem;
+    padding-top: 8rem;
     margin-left: 20rem;
 }
 #image-container{
@@ -132,7 +162,11 @@ h1{
 }
 .card{
     background-color: white;
-    height: 350px;
+    height: 450px;
+}
+.card-div i{
+    margin-top: 10px;
+    color: #fc9440;
 }
 h2{
     font-family: 'Times New Roman';
@@ -145,6 +179,207 @@ h2{
 p{
     font-size: 22px;
     color: white;
+    margin-left: 30px;
 }
+.about-section{
+height: 100vh;
+padding-top: 30rem;
+padding-left: 19rem;
+font-size: 20px;
+}
+h3{
+    font-size: 40px;
+     padding-left: 30rem;
+     margin-bottom: 20px;
+     margin-right: 20rem;
+}
+h4{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 170px;
+    color: royalblue;
+     margin-bottom: 20px;
+}
+.card-box{
+    display: flex;
+    padding-bottom: 5px;
+}
+.cards p{
+    margin-left: 50px;
+    color: black;
+}
+.about-section .cards{
+    background-color: white ;
+    border-radius: 15px;
+    height: 350px;
+     width: 600px;
+    gap: 100px;
+    margin: 20px;
+
+}
+.card-box{
+    margin-left: -300px;
+    margin-top: 100px;
+}
+.about-section .btn{
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: royalblue;
+    border-radius: 5px; 
+    margin-left: 150px;
+    margin-top: 35px;
+    font-size: 20px;
+    color: white;
+}
+.community-section{
+height: 70vh;
+padding-top: 3rem;
+padding-left: 19rem;
+font-size: 20px;
+}
+.community-section .butt{
+    width: 300px;
+    height: 80px;
+    margin-left: 450px;
+     margin-bottom: 3rem; 
+    font-size: 30px;
+    font-style: bold;
+    font-style: oblique;
+    border-radius: 20px;
+    border: none;
+}
+.butt{
+    margin-top: 8rem;
+}
+h5{
+     font-size: 30px;
+    margin-top: 20px;
+    margin-left: 500px;
+      color:  #fc9440;
+     margin-bottom: 20px;
+     font-weight: bold;
+}
+.community-section p{
+    font-style: italic;
+    font-size: 22px;
+    margin-right: 20rem;
+}
+footer{
+    background-color: #14213d;
+    background: e0e0e0;
+    padding-top: 30px;
+    margin-top: 50px;
+    justify-content: center;
+}
+.footer-contents{
+  width: 1140px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.contents{
+    width: 30%;
+}
+h6{
+    font-size: 30px;
+    margin-bottom: 18px;
+    font-size: 28px;
+    color: royalblue;
+}
+.footer-contents p{  
+      width: 200px;
+    margin: auto;
+    padding: 3px;
+    color: #e5e5e5;
+
+}
+.contents{
+    display: flex;
+    flex-direction: column;
+    margin-left: 14rem;
+    margin-right: 10rem;
+}
+.list{
+    gap:5px;
+    font-size: 30px;
+    color: skyblue;
+     width: 10px;
+    height: 10px;
+}
+.list li{
+    width: 100px;
+    text-align: center;
+    list-style-type: none;
+    padding: 3.5px;
+    font-size: 23px;
+    position: relative;
+    color: gold;
+}
+.list li::before{
+    content: "";
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition-duration: 5s;
+}
+.list a{
+    color: #e8f0fe;
+    margin-left: 10px;
+}
+.list li:hover::before{
+    width: 70px;
+}
+.contents ul{
+    list-style: none;
+    margin-right: 14rem;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.social-icons{
+    text-align: center;
+    padding: 0;
+    display: flex;
+    
+}
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding-top: 1rem;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: royalblue;
+}
+.social-icons i{
+    font-size: 35px;
+    color: #E5E5E5;
+}
+.social-icons i:hover{
+    color: royalblue;
+}
+.bottom-bar{
+    background: #081b29;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.bottom-bar p{
+    color: #E5E5E5;
+    margin: 0;
+    font-size: 20px;
+    padding: 7px;
+}
+.footer-content img{
+    margin-left:20px ;
+}
+
 
 
