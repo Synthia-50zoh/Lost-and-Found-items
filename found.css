@@ -6,16 +6,10 @@ body {
       font-family: poppins, sans-serif;
 }
 .header-container {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    align-items: center;
-    background-color: white;
-    justify-content: space-between;
-    width: 100vw;
-    height: 100px;
-    margin-bottom: 5rem;
+display: flex; 
+justify-content: space-between;
+align-items: center;
+background-color: white;
 }
 .logo{
     margin-left: 8rem;
@@ -47,8 +41,55 @@ body {
 }
 .header-button:hover{
     background-color: black;
-
 }
+
+
+
+/* Fade-in keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade-in */
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-delay {
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+/* Optional header styling */
+.found-items {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #f0f8f7;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.found-items h1 {
+  color: #2a9d8f;
+  font-size: 2rem;
+}
+
+.found-description {
+  font-size: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
 .found-search-section {
   max-width: 600px;
   margin: 2rem auto;
