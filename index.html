@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Solution For Lost And Found Items</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="header-container">
+    <header class="">
+        <nav class="header-container">
+            
                 <div class="logo">
                     <a href="#">
                     </a><img src="images/logo images.png" height="80px" width="80px">
@@ -21,30 +23,35 @@
                         <li>  <a href="index.html" class="active">Home</a></li>
                         <li> <a href="reportloss.html">Report Lost</a></li>
                         <li> <a href="reportfound.html">Report Found</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+
                 </ul>
                 </div>
                     <a href="signout.html" class="header-button">Sign out</a>
-            </div>
+        
         </nav>
     </header>
 
     <section class=" mainPage-section">
         <div  class="mainPage">
             <div>
-                <h1>Find &</h1>
-                <h1>Recover</h1>
+                <h1>Find & Recover</h1>
+                
                 <h1 class="find">With <span class="recover">Ease</span></h1>
                 <span class="text">Experience effortless recovery with our dedicated 
                     <br>lost and found services</span>
             </div>
-     
+        </div>
       <div class="lost-items">
-         <a href="lost.html" class="lost-button">Lost</a>
-         <a href="found.html" class="found-button">Found</a>
-                  <div class="image">
-                       <img src="images/Illustration.jpeg" width="400px" height="200px">
-                 </div>
-                    </div>
+        <div class="buttons">
+         <a href="reportloss.html" class="lost-button">Lost</a>
+         <a href="reportfound.html" class="found-button">Found</a>
+        </div>
+                  <div class="image-22">
+                       <img src="images/Illustration.jpeg" width="500px" height="300px">
+                  </div>
+        </div>
     </section>
     <section class="welcome-section">
         <h2>Find Your Way Back to What`s Yours</h2>
@@ -54,26 +61,30 @@
             or found <br>an item that doesn`t belong to you, my platform is here to help you reunite
             with it`s rightfull owner
         </p>
-                   <div id="image-container">
-                    <div class="card">
-                     <img src="images/laptop.jpeg" width="300px" height="300px">
-                       <div><i class="fa-brands fa-searchengin"></i>Laptop </div>
-                       <div> <i class="fa-solid fa-location-dot"></i> Location</div>
-                       <div><i class="fa-solid fa-calendar-check"></i> Time & Date</div>
+                    <div class="card-wrapper">
+                    <div class="card-container">
+                     <img src="images/laptp.jpeg" width="300px" height="300px">
+                       <div class="card-middle"><i class="fa-brands fa-searchengin"></i><span>Laptop </span></div>
+                       <div class="card-middle"> <i class="fa-solid fa-location-dot"></i> <span>Location</span></div>
+                       <div class="card-middle"><i class="fa-solid fa-calendar-check"></i><span> Time & Date</span></div>
+                      <button class="btn-card">View More</button>
                      </div>
-                     <div class="card">
-                        <img src="images/phone.jpeg" width="300px" height="300px">
-                          <div><i class="fa-brands fa-searchengin"></i>Phone </div>
-                       <div> <i class="fa-solid fa-location-dot"></i> Location</div>
-                       <div><i class="fa-solid fa-calendar-check"></i> Time & Date</div>
+                     <div class="card-container">
+                        <img src="images/iphone.jpeg" width="300px" height="300px">
+                          <div class="card-middle"><i class="fa-brands fa-searchengin"></i><span>Phone</span> </div>
+                       <div class="card-middle"> <i class="fa-solid fa-location-dot"></i><span>Location</span> </div>
+                       <div class="card-middle"><i class="fa-solid fa-calendar-check"></i><span>Time & Date</span> </div>
+                        <button class="btn-card">View More</button>
                         </div>
-                        <div class="card">
-                          <img src="images/gas stock.jpeg" width="300px" height="300px">
-                            <div><i class="fa-brands fa-searchengin"></i>Gas stock</div>
-                       <div> <i class="fa-solid fa-location-dot"></i> Location</div>
-                       <div><i class="fa-solid fa-calendar-check"></i> Time & Date</div>
-                          </div>
-                </div>
+                        <div class="card-container">
+                          <img src="images/Guitar classic.jpeg" width="300px" height="300px">
+                            <div class="card-middle"><i class="fa-brands fa-searchengin"></i><span>Gas stock</span></div>
+                       <div class="card-middle"> <i class="fa-solid fa-location-dot"></i><span>Location</span> </div>
+                       <div class="card-middle"><i class="fa-solid fa-calendar-check"></i><span>Time & Date</span> </div>
+                        <button class="btn-card">View More</button>
+                        </div>
+                    </div>
+
     </section>
     <section class="about-section">
         <h3>About Us</h3>
@@ -99,7 +110,7 @@
                     leveraging technology to create a more connected and organised society where,
                     people can easily recover their lost items and return found ones to their 
                     rightful owners
-                </p> 
+                </p>
                  <button class="btn">Sign Up</button>
             </div>
             <div class="cards">
@@ -169,5 +180,9 @@
                 <p>&COPY; 2025 Digital Solution for Lost and Found Items in Cameroon. All right Reserved</p>
             </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+</script>
 </body>
 </html>

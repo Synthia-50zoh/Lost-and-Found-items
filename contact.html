@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REPORTLOST FORM</title>
+    <title>Contact Form</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="lost.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    <header>
+     <header>
         <nav>
             <div class="header-container">
                 <div class="logo">
@@ -22,8 +22,8 @@
                         <li>  <a href="index.html" class="active">Home</a></li>
                         <li> <a href="reportloss.html">Report Lost</a></li>
                         <li> <a href="reportfound.html">Report Found</a></li>
-                          <li><a href="community.html">Community</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                 </ul>
                 </div>
                     <a href="signout.html" class="header-button">Sign out</a>
@@ -31,42 +31,19 @@
         </nav>
     </header>
 
-    <header class="lost-header scroll-fade">
-  <h2>Report Lost Item</h2>
-  <p class="lost-description">
-    Lost something? Submit the details below to report your missing item.
-     The more specific you are, the higher the chance someone can help return it. Include descriptions,
-      location last seen, and the date it went missing.
-  </p>
-</header>
-
-
-
-    <section class="lostSearch-section">
-  <h2>Search Lost Items</h2>
-  <form id="lostSearchForm">
-
-    <label for="itemName">Item Name</label>
-    <input type="text" id="itemName" name="itemName" placeholder="e.g. an hp laptop">
-
-    <label for="category">Category</label>
-    <select id="category" name="category">
-      <option value="">All Categories</option>
-      <option>Phone</option>
-      <option>Bag</option>
-      <option>Wallet</option>
-      <option>Keys</option>
-    </select>
-
-    <label for="date">Date Lost (optional)</label>
-    <input type="date" id="date" name="date">
-
-    <label for="location">Lost Location (optional)</label>
-    <input type="text" id="location" name="location" placeholder="e.g. Library, Cafeteria">
-
-    <button type="submit">Search</button>
-  </form>
-</section>
+    <section class="contact-section">
+            <form class="contact-form" action="#" method="post">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" required>
+                <label for="Phone number">Phone Number</label>
+                <input type="number" name="number" required>
+                <label for="email">Email Address</label>
+                <input type="email" name="email"  id="email" required>
+                 <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="button">Send Message</button>
+            </form>
+        </section>
 
     <footer>
      <div class="footer-contents">
@@ -105,9 +82,11 @@
                 <p>&COPY; 2025 Digital Solution for Lost and Found Items in Cameroon. All right Reserved</p>
             </div>
     </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
 </script>
+
+
 </body>
 </html>

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REPORTFOUND FORM</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="reportfound.css">
 </head>
 <body>
@@ -20,6 +22,9 @@
                         <li>  <a href="index.html" class="active">Home</a></li>
                         <li> <a href="reportloss.html">Report Lost</a></li>
                         <li> <a href="reportfound.html">Report Found</a></li>
+                          <li><a href="community.html">Community</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+
                 </ul>
                 </div>
                     <a href="signout.html" class="header-button">Sign out</a>
@@ -35,6 +40,8 @@
     Found something that might belong to someone else? Help reconnect lost items with their owners by filling out the form below. Provide clear details and, if possible, upload a photo to make it easier for the rightful owner to identify the item.
   </p>
 </header>
+
+<section id="foundItems"></section>
 
 
      <section class="report-found">
@@ -67,7 +74,7 @@
             <div class="form-group">
                 <label for="image">Upload Photo</label>
                 <input type="file" id="image" name="image">
-                <button type="submit">Submit</button>
+                <button type="button">Submit</button>
                 <p id="formMessage"></p>
             </div>
         </form>
@@ -111,5 +118,10 @@
                 <p>&COPY; 2025 Digital Solution for Lost and Found Items in Cameroon. All right Reserved</p>
             </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+</script>
+    <script src="./found.js"></script>
 </body>
 </html>

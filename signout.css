@@ -30,7 +30,7 @@ body {
 
 .nav-links a:hover,
 .active{
-    color: royalblue;
+    color:  rgb(15, 31, 78);
 }
 
 .header-button{
@@ -46,6 +46,7 @@ body {
 .header-button:hover{
     background-color: black;
 }
+
 .signout-page {
   display: flex;
   justify-content: center;

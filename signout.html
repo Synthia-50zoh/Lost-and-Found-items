@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGNOUT FORM</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="signout.css">
 </head>
 <body>
@@ -20,6 +22,8 @@
                         <li>  <a href="index.html" class="active">Home</a></li>
                         <li> <a href="reportloss.html">Report Lost</a></li>
                         <li> <a href="reportfound.html">Report Found</a></li>
+                          <li><a href="community.html">Community</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
                 </ul>
                 </div>
                   <a href="signout.html" class="header-button">Sign out</a>
@@ -35,7 +39,7 @@
       <label for="feedback">Your Comment</label>
       <textarea id="feedback" name="feedback" rows="4" placeholder="e.g. Just done for today..."></textarea>
 
-      <button type="submit" class="signout-btn">Sign Out</button>
+      <button type="submit" id="btn-out" class="signout-btn">Sign Out</button>
       <a href="dashboard.html" class="cancel-btn">Cancel</a>
     </form>
   </div>
@@ -80,5 +84,13 @@
                 <p>&COPY; 2025 Digital Solution for Lost and Found Items in Cameroon. All right Reserved</p>
             </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.getElementById("btn-out").addEventListener("click", function()
+    {
+      alert("You  have been signed out");
+    }
+  );
+</script>
 </body>
 </html>

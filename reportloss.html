@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOST FORM</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="reportloss.css">
 </head>
 <body>
@@ -21,6 +23,8 @@
                         <li>  <a href="index.html" class="active">Home</a></li>
                         <li> <a href="reportloss.html">Report Lost</a></li>
                         <li> <a href="reportfound.html">Report Found</a></li>
+                          <li><a href="community.html">Community</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
                 </ul>
                 </div>
                     <a href="signout.html" class="header-button">Sign out</a>
@@ -36,7 +40,7 @@
         </p>
         </section>
 
-        <section class="lost-image">
+        <!-- <section class="lost-image">
              <div>
             <img src="images/handbag.jpeg.jpeg" width="300px" height="300px">
             <div  class="image-button">
@@ -55,19 +59,21 @@
                <button>View More</button>
             </div>
           </div>
-        </section>
+        </section> -->
+
+        <section id="lostItems" class="lost-image"></section>
 
 
  <section class="lost-page">
         <h1>Missing Items</h1>
   <form class="lost-form">
      <i class="fa-solid fa-user"></i>
-    <input type="text" placeholder="Item name" required>
-    <textarea placeholder="Describe the item..." required></textarea>
-    <input type="date" required>
-    <input type="text" placeholder="Last known location" required>
-    <input type="file" accept="image/*">
-    <button class="btn-form" type="submit">Submit Report </button>
+    <input id="name" type="text" placeholder="Item name" required>
+    <textarea id=" describe" placeholder="Describe the item..." required></textarea>
+    <input id='date' type="date" required>
+    <input id="location" type="text" placeholder="Last known location" required>
+    <input id="image" type="file">
+    <button class="btn-form" id="submit" type="button">Submit Report </button>
   </form>
 
   <div class="search-section">
@@ -116,5 +122,10 @@
                 <p>&COPY; 2025 Digital Solution for Lost and Found Items in Cameroon. All right Reserved</p>
             </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+</script>
+    <script src="./main.js"></script>
      </body>
      </html>

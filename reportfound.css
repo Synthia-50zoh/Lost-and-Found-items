@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: royalblue;
+    background-color:  rgb(15, 31, 78);
       font-family: poppins, sans-serif;
 }
 .header-container {
@@ -79,14 +79,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
 .report-found{
     max-width: 500px;
     padding: 2rem;
@@ -140,6 +132,8 @@ button:hover{
     margin-top: 1rem;
     color: green;
 }
+
+
 
 
 footer{

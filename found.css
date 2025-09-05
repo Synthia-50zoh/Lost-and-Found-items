@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: royalblue;
+    background-color:  rgb(15, 31, 78);
       font-family: poppins, sans-serif;
 }
 .header-container {
@@ -90,12 +90,16 @@ background-color: white;
 }
 
 
+
 .found-search-section {
   max-width: 600px;
   margin: 2rem auto;
   background: #f9f9f9;
   padding: 2rem;
   border-radius: 8px;
+}
+.found-search-section{
+    margin-top: 20rem;
 }
 
 .found-search-section h2 {
