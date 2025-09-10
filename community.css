@@ -88,7 +88,12 @@ body {
     margin: 0 auto 50px;
     display: block;
     border-radius: 10px;
+    transition: transform 0.3s ease;
 }
+    .community-image:hover {
+    transform: translateY(-10px);
+    }
+
 
 .community-features {
     display: flex;

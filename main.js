@@ -33,7 +33,6 @@ function getItemValues(){
 
     let objt = {
         name,
-        \  bdate,
         Description,
         location,
         image
