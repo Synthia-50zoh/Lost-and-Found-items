@@ -75,7 +75,7 @@ body {
 }
 
 .community-header p {
-    color: royalblue;
+    color: #fc9440;
     font-size: 20px;
     max-width: 800px;
     margin: 0 auto;
@@ -152,27 +152,7 @@ body {
 
 .join-button:hover {
     background-color: #14213d;
-    transform: scale(1.05);
-}
-.discord-section {
-    background-color: #081b29;
-    border-radius: 10px;
-    padding: 40px;
-    margin: 50px 0;
-    text-align: center;
-}
-
-.discord-section h2 {
-    color: #E5E5E5;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.discord-section p {
-    color: #E5E5E5;
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto 30px;
+    transform: scale(1.05s ease);
 }
 
 

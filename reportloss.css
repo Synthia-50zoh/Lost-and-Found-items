@@ -119,7 +119,12 @@ body {
     justify-content: center;
     gap: 7rem;
     margin-top: 5rem;
+    transition: transform 0.3s ease;
 }
+.lost-image:hover{
+    transform: translateY(-10px);
+}
+
 .image-button{
     width: 100px;
     height: 40px;

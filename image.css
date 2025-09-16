@@ -48,8 +48,12 @@ background-color: white;
 .image-grid{
     display: grid;
     max-width: 400px;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+  justify-content: center;
+  gap: 4rem;
+  margin:auto;
+  transition: transform 0.3s ease;
 }
 .image-container{
     text-align: center;
@@ -60,6 +64,9 @@ background-color: white;
     height: 300px;
     width: 300px;
     border-radius: 10px;
+}
+.image-container img:hover{
+      transform: translateY(-10px);
 }
 .image-container p{
     font-size: 18px;

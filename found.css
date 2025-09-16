@@ -68,6 +68,11 @@ background-color: white;
   opacity: 0;
 }
 
+#foundItems{
+  display: flex;
+  flex-direction: row;
+}
+
 /* Optional header styling */
 .found-items {
   text-align: center;
