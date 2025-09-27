@@ -1,34 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 /* Reset body styles and set background and font */
 body {
-    margin: auto;
-    padding: 0;
-    width: 100%;
-    max-width: 100vw;
+    height: fit-content;
     overflow-x: hidden;
-    background-color: rgb(15, 31, 78);
+    overflow-y: visible;
+    background-color: rgb(240, 240, 240);
     font-family: poppins, sans-serif;
+    font-size: 62.5%;
 }
 
 /* Header container styles */
 .header-container {
-    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    width: 100%;
-    z-index: 5;
+    height: 120px;
+    margin-bottom: 2px;
+    box-shadow: 1px 1.5px 5px black;
+}
+
+.header-container .logo {
+    width: fit-content;
+    height: fit-content;
+    margin-left: 120px;
+}
+
+.header-container .nav-links {
+    display: flex;
+    gap: 1rem;
 }
 
 /* Navigation links styles */
 .nav-links ul {
     list-style: none;
+}
+
+.nav-links .links ul {
     display: flex;
     flex-direction: row;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: bold;
-    gap: 50px;
+    gap: 2rem;
+    /* margin-right: /; */
 }
+
+.nav-links .links-mobile ul {
+    display: none;
+    /* flex-direction: column; */
+    font-size: 1rem;
+    font-weight: bold;
+    gap: 2rem;
+    /* margin-right: /; */
+}
+
+.header-dropdown {
+    display: none;
+}
+
 
 /* Navigation link hover and active state */
 /* .nav-links a:hover, .active { } */
@@ -42,11 +74,8 @@ body {
     border: none;
     border-radius: 5px;
     text-align: center;
-    font-size: 20px;
-}
-.header-button{
-    margin-right: 10px;
-    color: white;
+    font-size: 1rem;
+    margin-right: 80px;
 }
 
 /* Header button hover effect */
@@ -55,76 +84,119 @@ body {
       color: white;
 }
 
+@media all and (max-width: 1300px) {
+    .header-container .nav-links {
+        gap: 30px;
+    }
+
+    /* Navigation links styles */
+    .nav-links .links ul {
+        font-size: 1rem;
+        gap: 25px;
+    }
+}
+
+
+
+@media all and (max-width: 950px) {
+    .nav-links .links ul {
+        display: none;
+    } 
+
+    .header-dropdown {
+        display: block;
+    }
+    
+    /* Header button styles */
+    .header-button {
+        height: 50px;
+        margin-right: 40px;
+    }
+}   
+@media all and (max-width: 650px) {
+    .header-container .logo {
+        margin-left: 50px;
+    }
+}
+
+/* End of Header section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Main page section with background image */
 .mainPage-section {
+    
+    /* width: 100dvw; */
     background-image: url(images/lostfound.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 70vh;
     display: flex;
     flex-direction: row;
     margin-bottom: 40px;
-    padding-top: 16rem;
-}
-
-/* Main heading styles */
-h1 {
-    font-family: 'Time New Roman';
-    width: 100%;
-    font-size: 80px;
-    color: white;
-}
-
-/* Highlighted text colors */
-.find {
-    color: #fc9440;
-}
-.recover {
-    color: green;
-}
-
-/* Main page text styles */
-.text {
-    font-size: 30px;
-    color: white;
+    padding-top: 7rem;
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Main page container */
 .mainPage {
-    height: 50vh;
-    width: 100%;
-    display: flex;
+    width: 550px;
     align-items: center;
-    margin-left: 10rem;
-    margin-right: 10rem;
+}
+/* Main heading styles */
+.mainPage h1 {
+    font-family: 'Time New Roman';
+    font-size: 2rem;
+    color: black;
+}
+
+/* Highlighted text colors */
+.mainPage .find {
+    color: black;
+}
+.mainPage .recover {
+    color: white;
+}
+
+/* Main page text styles */
+.mainPage .text {
+    font-size: 2rem;
+    color: white;
 }
 
 /* Button base styles */
 
 /* Lost items container */
 .lost-items {
-    margin-right: 10rem;
     gap: 20px;
-}
-
-/* Lost button inside anchor */
-a .lost-button {
-    width: 20px;
-    height: 75px;
-    margin-top: 20px;
 }
 
 /* Lost button styles */
 .lost-button {
+    width: 20px;
+    height: 75px;
     background-color: #fc9440;
     padding: 25px 80px;
     margin-left: 4rem;
     border-radius: 10px;
-    font-size: 22px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: white;
-    margin-top: 100rem;
+    margin-top: 20px;
 }
 
 /* Lost button hover effect */
@@ -142,7 +214,7 @@ a .lost-button {
     border-radius: 10px;
     margin-top: 5rem;
     color: white;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -159,12 +231,35 @@ a .lost-button {
     padding: 3rem;
     transition: transform 0.1s;
     margin-top: 5rem;
-    margin-bottom: 20rem;
+    margin-bottom: 5rem;
     transition: transform 0. 3s ease;
 }
 .image-22:hover{
         transform: translateY(-10px);
 }
+
+@media all and (max-width: 950px) {
+    /* Main page section with background image */
+    .mainPage-section {
+        flex-direction: column;
+        height: 1050px;
+        align-items: center;
+    }
+    /* Main heading styles */
+.mainPage h1 {
+    font-size: 2rem;
+}
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Welcome section styles */
 .welcome-section {
@@ -174,122 +269,21 @@ a .lost-button {
     padding-top: 8rem;
     margin-left: 20rem;
 }
-
-/* Image container for cards */
-#image-container {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 320px;
-    padding-top: 4rem;
-}
-
-/* Card base styles */
-.card {
-    background-color: white;
-    height: 450px;
-}
-
-/* Card icon styles */
-.card-div i {
-    margin-top: 10px;
-    color: #fc9440;
-}
-
-/* Card heading styles */
-h2 {
-    font-family: 'Times New Roman';
-    font-size: 40px;
-    justify-content: center;
-    color: #fc9440;
-    padding-left: 16rem;
-    padding-bottom: 2rem;
-}
-
-/* Paragraph styles */
-p {
-    font-size: 22px;
-    color: white;
-    margin-left: 30px;
-}
-
-/* Card button styles */
-.btn-card {
-    width: 60%;
-    height: 50px;
-    padding: 0;
-    background-color: rgb(15, 31, 78);
-    color: #fc9440;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    margin: auto;
-    text-align: center;
-    align-items: center;
-}
-
-
-.btn-card{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-a .btn-card{
-    text-align: center;
-}
-
-
-
-/* Card button margin */
-.btn-card {
-    margin-top: 50px;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    align-items: center;
-} 
-.btn-card:hover{
-    background-color: black;
-}
-
-/* About section styles */
-.about-section {
-    height: 100vh;
-    padding-top: 30rem;
-    padding-left: 19rem;
-    font-size: 20px;
-}
-
-/* About section headings */
-h3 {
-    color: #fc9440;
-    font-size: 40px;
-    padding-left: 30rem;
-    margin-bottom: 20px;
-    margin-right: 20rem;
-}
-h4 {
-    font-size: 30px;
-    margin-top: 20px;
-    margin-left: 170px;
-    color: rgb(15, 31, 78);
-    margin-bottom: 20px;
-}
-
 /* Card wrapper styles */
-.card-wrapper {
+   .card-wrapper {
     display: flex;
     margin-right: 50rem;
     gap: 5rem;
 }
 
+
 /* Card wrapper hover effect */
-.card-wrapper:hover {
+   .card-wrapper:hover {
     transform: translateY(-10px);
 }
 
 /* Card container styles */
-.card-container {
+   .card-container {
     display: flex;
     flex-direction: column;
     border-radius: 6px;
@@ -302,12 +296,13 @@ h4 {
 }
 
 /* Card container hover effect */
-.card-container:hover {
+   .welcome-section.card-container:hover {
  transform: translateY(-10px);
 }
 
+
 /* Card image styles */
-.card-image {
+  .welcome-section.card-image {
     width: 100%;
     height: 150px;
     object-fit: cover;
@@ -315,16 +310,136 @@ h4 {
 }
 
 /* Card middle content styles */
-.card-middle {
+  .card-middle {
     align-items: center;
     justify-content: center;
     align-content: center;
     flex-grow: 1;
+    font-size: 1rem;
+}
+
+
+/* Icon card styles */
+  .welcome-section.icon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Image container for cards */
+ .welcome-section #image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 320px;
+    padding-top: 4rem;
+}
+
+/* Card base styles */
+ .welcome-section .card {
+    background-color: white;
+    height: 450px;
+}
+
+/* Card icon styles */
+ .welcome-section .card-div i {
+    margin-top: 10px;
+    color: #fc9440;
+}
+
+/* Card heading styles */
+ .welcome-section h2 {
+    font-family: 'Times New Roman';
+    font-size: 40px;
+    justify-content: center;
+    color: #fc9440;
+    padding-left: 16rem;
+    padding-bottom: 2rem;
+}
+
+/* Paragraph styles */
+ .welcome-section p {
+    font-size: 22px;
+    color: black;
+    margin-left: 30px;
+}
+
+/* Card button styles */
+ .welcome-section .btn-card {
+    width: 60%;
+    height: 50px;
+    padding: 0;
+    background-color: rgb(15, 31, 78);
+    color: #fc9440;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+     display: flex;
+    justify-content: center;
+}
+
+  /* .welcome-section .btn-card { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} */
+
+/* Card button margin */
+ .welcome-section .btn-card {
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+} 
+ .welcome-section .btn-card:hover{
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+/* About section styles */
+.about-section {
+    height: 100vh;
+    padding-top: 30rem;
+    padding-left: 19rem;
     font-size: 20px;
 }
 
+/* About section headings */
+
+
+h3 {
+    color: #fc9440;
+    font-size: 40px;
+    padding-left: 30rem;
+    margin-bottom: 20px;
+    margin-right: 20rem;
+}
+ h4 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 170px;
+    color: rgb(15, 31, 78);
+    margin-bottom: 20px;
+}
+
+ 
 /* Card box styles */
-.card-box {
+.cards-box {
     display: flex;
     padding-bottom: 5px;
     box-shadow: 0 0 20px rgba gray;
@@ -337,7 +452,7 @@ h4 {
 }
 
 /* About section cards styles */
-.about-section .cards {
+ .cards {
     background-color: white;
     border-radius: 15px;
     height: 350px;
@@ -360,19 +475,18 @@ h4 {
     margin-top: 100px;
 }
 
-/* Icon card styles */
-.icon-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+
+
+
+
+
+
 
 
 /* Community section styles */
 .community-section {
     height: 70vh;
-    padding-top: 6rem;
+    /* padding-top: 6rem; */
     padding-left: 19rem;
     font-size: 20px;
     font-weight: bold;
@@ -380,18 +494,22 @@ h4 {
 
 /* Community section button styles */
 .community-section .btn-community {
+    justify-content: center;
+    align-items:center;
+    display: flex;
     width: 400px;
     height: 90px;
-    margin-left: 450px;
+    margin-left: 400px;
     margin-bottom: 3rem;
     font-size: 30px;
     font-weight: bold;
     font-style: oblique;
-    border-radius: 20px;
+    border-radius: 6rem;
     background-color: white;
     border: none;
     box-shadow: 3px 3px 4px 3px grey;
 }
+
 /*butt hover style*/
 .btn-community:hover{
     background-color:  royalblue;

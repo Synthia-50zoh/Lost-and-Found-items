@@ -2,11 +2,11 @@
 body {
     margin: 0;
     padding: 0;
-      max-width: 100vw;
+    max-width: 100vw;
     overflow-x: hidden;
     position: sticky;
-    background-color:  rgb(15, 31, 78);
-      font-family: poppins, sans-serif;
+    background-color: rgb(240, 240, 240);
+    font-family: poppins, sans-serif;
 }
 .header-container {
 display: flex; 

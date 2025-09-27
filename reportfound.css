@@ -2,8 +2,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color:  rgb(15, 31, 78);
-      font-family: poppins, sans-serif;
+    background-color: rgb(240, 240, 240);
+    font-family: poppins, sans-serif;
 }
 .header-container {
     position: fixed;

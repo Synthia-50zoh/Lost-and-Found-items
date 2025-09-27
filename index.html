@@ -4,60 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Solution For Lost And Found Items</title>
+    <!-- <link rel="stylesheet" href="login.css"> -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
     <header class="">
         <nav class="header-container">
-            
-                <div class="logo">
-                    <a href="#">
-                    </a><img src="images/logo images.png" height="80px" width="80px" data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">
-                 </a>
-                </div>
-                <div  class="nav-links">
+            <div class="logo">
+                <a href="#">
+                </a><img src="images/logo images.png" height="80px" width="80px" data-aos="fade-down-right"
+                    data-aos-duration="1000"data-aos="fade-down-right"
+                    data-aos-duration="1000">
+                </a>
+            </div>
+            <div  class="nav-links">
+                <!-- expanded -->
+                <div class="links">
                     <ul data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">
+                        data-aos-duration="1000"data-aos="fade-down-right"
+                        data-aos-duration="1000">
                         <li>  <a href="index.html" class="active">Home</a></li>
                         <li> <a href="reportloss.html">Report Lost</a></li>
                         <li> <a href="reportfound.html">Report Found</a></li>
                         <li><a href="community.html">Community</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
-
-                </ul>
+                    </ul>
                 </div>
+                <div class="links-mobile">
+                    <div class="header-dropdown">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                    <ul data-aos="fade-down-right"
+                        data-aos-duration="1000"data-aos="fade-down-right"
+                        data-aos-duration="1000">
+                        <li>  <a href="index.html" class="active">Home</a></li>
+                        <li> <a href="reportloss.html">Report Lost</a></li>
+                        <li> <a href="reportfound.html">Report Found</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="signout-btn">
                     <a href="signout.html" class="header-button" data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">Sign out</a>
-        
+                        data-aos-duration="1000"data-aos="fade-down-right"
+                        data-aos-duration="1000">Sign out</a>
+                </div>
+
+            </div>
         </nav>
     </header>
+    
+    <!-- <div id="loginOverlay" class="loginOverlay">
+         <div class="login-container" >
+                <h6>Login</h6>
+                <form  id="login-form" action="index.html">
+                    <label for="username">Username/Email:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Login</button>
+                    <p>Don`t have an account?<a href="index.html">Create an account</a><br>
+                         <a href="#">Forget password</a></p>
+                </form>
+             </div>
+     </div> -->
 
     <section class=" mainPage-section">
         <div  class="mainPage">
             <div>
-                <h1>Find & Recover</h1>
-                
+                <h1> <span class="recover">Find</span> & Recover</h1>
                 <h1 class="find">With <span class="recover">Ease</span></h1>
-                <span class="text">Experience effortless recovery with our dedicated 
-                    <br>lost and found services</span>
+            </div>
+            <div>
+                <span class="text">Experience effortless recovery with our dedicated lost and found services</span>
             </div>
         </div>
-      <div class="lost-items">
-        <div class="buttons">
-         <a href="reportloss.html" class="lost-button">Lost</a>
-         <a href="reportfound.html" class="found-button">Found</a>
-        </div>
-                  <div class="image-22">
-                       <img src="images/micomput.jpeg" width="500px" height="300px" >
-                  </div>
-        </div>
+        <div class="lost-items">
+            <div class="buttons">
+                <a href="reportloss.html" class="lost-button">Lost</a>
+                <a href="reportfound.html" class="found-button">Found</a>
+            </div>
+            <div class="image-22">
+                <img src="images/micomput.jpeg" width="500px" height="300px" >
+            </div>
+        </div> 
     </section>
 
     <section class="welcome-section">
@@ -85,7 +118,7 @@
                         </div>
                         <div class="card-container">
                           <img src="images/Guitar classic.jpeg" width="300px" height="300px">
-                            <div class="card-middle"><i class="fa-brands fa-searchengin"></i><span>Gas stock</span></div>
+                            <div class="card-middle"><i class="fa-brands fa-searchengin"></i><span>Guitar Clasic</span></div>
                        <div class="card-middle"> <i class="fa-solid fa-location-dot"></i><span>Location</span> </div>
                        <div class="card-middle"><i class="fa-solid fa-calendar-check"></i><span>Time & Date</span> </div>
                          <a href="image.html" class="btn-card">View More</a>
@@ -93,8 +126,11 @@
                     </div>
 
     </section>
+
+
+
     <section class="about-section">
-        <h3>About Us</h3>
+        <h3>How It Works</h3>
         <p>
             Our platform bridges the gap between lost and found items in cameroon, providing
             a digital space where people can report<br> lost items,find recover belongings and 
@@ -132,6 +168,9 @@
             </div>
         </div>
     </section>
+
+
+
     <section class="community-section">
            <a href="community.html" class="btn-community">Join Community</a>
     <h5>Support Us</h5>
@@ -188,9 +227,11 @@
                 <p>&COPY; 2025 Digital Solution for Lost and Found Items in Cameroon. All right Reserved</p>
             </div>
     </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
-  <script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
     AOS.init();
-</script>
+    </script>
+    <!-- <script src="./login.js"></script> -->
+
 </body>
 </html>

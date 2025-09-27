@@ -4,10 +4,10 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(15, 31, 78);
+    background-color: rgb(240, 240, 240);
     max-width: 100vw;
     overflow-x: hidden;
-      font-family: poppins, sans-serif;
+    font-family: poppins, sans-serif;
 
 }
 .header-container {
