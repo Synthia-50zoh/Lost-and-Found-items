@@ -16,37 +16,13 @@ let lost = [{
     }
 ]
 
-let submitButton = document.getElementById('submit')
-submitButton.addEventListener('click',()=>{ getItemValues()
-    renderItems()
-} )
-
-function getItemValues(){
-    let name = document.getElementById("name").value
-    let Description = document.getElementById("describe")
-    let date = document.getElementById("date").value
-    let location = document.getElementById("location").value
-    let getimage = document.getElementById("image")
-
-    let image = URL.createObjectURL(getimage.files[0])
-    console.log(getimage)
-
-    let objt = {
-        name,
-        Description,
-        location,
-        image
-    }
-
-    lost.push(objt)
-}
 
 function renderItems(){
     let section = document.getElementById('lostItems')
     let html = ''
     lost.forEach((item)=>{
         html += `<section>
-        <img src=${item.image} width="300px" height="300px">
+        <img src=${item.images} width="300px" height="300px">
         <p>Item: ${item.name}</p>
         </section>`
     })
@@ -55,3 +31,43 @@ function renderItems(){
 }
 
 renderItems()
+
+// let submitButton = document.getElementById('submit')
+// submitButton.addEventListener('click',()=>{ getItemValues()
+//     renderItems()
+// } )
+
+// function getItemValues(){
+//     let name = document.getElementById("name").value
+//     let Description = document.getElementById("describe")
+//     let date = document.getElementById("date").value
+//     let location = document.getElementById("location").value
+//     let getimage = document.getElementById("image")
+
+//     let image = URL.createObjectURL(getimage.files[0])
+//     console.log(getimage)
+
+//     let objt = {
+//         name,
+//         Description,
+//         location,
+//         image
+//     }
+
+//     lost.push(objt)
+// }
+
+// function renderItems(){
+//     let section = document.getElementById('lostItems')
+//     let html = ''
+//     lost.forEach((item)=>{
+//         html += `<section>
+//         <img src=${item.image} width="300px" height="300px">
+//         <p>Item: ${item.name}</p>
+//         </section>`
+//     })
+
+//     section.innerHTML = html
+// }
+
+// renderItems()

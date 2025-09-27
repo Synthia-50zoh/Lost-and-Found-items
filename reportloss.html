@@ -1,97 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LOST FORM</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="reportloss.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="reportfound.css">
 </head>
 <body>
     
-    <header>
-        <nav>
-            <div class="header-container">
-                <div class="logo">
-                    <a href="#">
-                    </a><img src="images/logo images.png" height="80px" width="80px" data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">
-                 </a>
-                </div>
-                <div  class="nav-links">
+    <header class="">
+        <nav class="header-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo images.png" height="80px" width="80px" data-aos="fade-down-right"
+                    data-aos-duration="1000"data-aos="fade-down-right"
+                    data-aos-duration="1000">
+                </a>
+            </div>
+            <div  class="nav-links">
+                <!-- expanded -->
+                <div class="links">
                     <ul data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">
+                        data-aos-duration="1000"data-aos="fade-down-right"
+                        data-aos-duration="1000">
                         <li>  <a href="index.html" class="active">Home</a></li>
                         <li> <a href="reportloss.html">Report Lost</a></li>
                         <li> <a href="reportfound.html">Report Found</a></li>
-                          <li><a href="community.html">Community</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                </ul>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
                 </div>
+                <div class="links-mobile">
+                    <div class="header-dropdown">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                    <ul data-aos="fade-down-right"
+                        data-aos-duration="1000"data-aos="fade-down-right"
+                        data-aos-duration="1000">
+                        <li>  <a href="index.html" class="active">Home</a></li>
+                        <li> <a href="reportloss.html">Report Lost</a></li>
+                        <li> <a href="reportfound.html">Report Found</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="signout-btn">
                     <a href="signout.html" class="header-button" data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">Sign out</a>
+                        data-aos-duration="1000"data-aos="fade-down-right"
+                        data-aos-duration="1000">Sign out</a>
+                </div>
+
             </div>
         </nav>
     </header>
+    
 
-<section class="lost-subheader">
+    <section class="lost-subheader">
         <h2 class="lost-subheader">Lost Something?</h2>
         <p class="lost-subheader" >Use our smart search system to browse all reported items.
             Whether it`s your wallet, keys,or devices-your 
             path to recovery starts here.
         </p>
- </section>
-
-        <!-- <section class="lost-image">
-             <div>
-            <img src="images/handbag.jpeg.jpeg" width="300px" height="300px">
-            <div  class="image-button">
-            <button>View More</button>
-            </div>
-           </div>
-           <div>
-              <img src="images/paino.jpeg.jpeg" width="300px" height="300px">
-               <div  class="image-button">
-              <button>View More</button>
-            </div>
-            </div>
-              <div >
-              <img src="images/destop.jpeg.jpeg" width="300px" height="300px">
-               <div class="image-button">
-               <button>View More</button>
-            </div>
-          </div>
-        </section> -->
-
-        <section id="lostItems" class="lost-image"></section>
-
-
- <section class="lost-page">
-        <h1>Missing Items</h1>
-  <form class="lost-form" >
-     <i class="fa-solid fa-user"></i>
-    <input id="name" type="text" placeholder="Item name" required>
-    <textarea id=" describe" placeholder="Describe the item..." required></textarea>
-    <input id='date' type="date" required>
-    <input id="location" type="text" placeholder="Last known location" required>
-    <input id="image" type="file">
-    <button class="btn-form" id="submit" type="button">Submit Report </button>
-  </form>
-
-  <div class="search-section">
-    <h2>Search FoundItems</h2>
-    <input type="text" placeholder="Search by name or keyword">
-    <button class="btn-form">Search</button>
-  </div>
     </section>
 
+
     
+    <section class="form-section">
+        <div class="form-container fade-in">
+            <h2>Report Found Item</h2>
+            <p class="form-description">
+                Provide clear details and, if possible, upload a photo to make it easier for the rightful owner to identify the item.
+            </p>
+            
+            <form id="foundItemForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="itemName">Item Name *</label>
+                        <input type="text" id="itemName" name="itemName" class="form-control" placeholder="e.g. Black wallet, iPhone, Keys" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category">Category *</label>
+                        <select id="category" name="category" class="form-control" required>
+                            <option value="">Select a category</option>
+                            <option>Electronics</option>
+                            <option>Jewelry</option>
+                            <option>Documents</option>
+                            <option>Clothing</option>
+                            <option>Bags & Wallets</option>
+                            <option>Keys</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="foundDate">Date Found *</label>
+                        <input type="date" id="foundDate" name="foundDate" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="foundLocation">Location Found *</label>
+                        <input type="text" id="foundLocation" name="foundLocation" class="form-control" placeholder="e.g. Bamenda Main Market, Douala Airport" required>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="description">Description *</label>
+                        <textarea id="description" name="description" class="form-control" placeholder="Provide a detailed description of the item, including brand, color, size, unique features, and any contents if applicable." required></textarea>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="contactInfo">Your Contact Information *</label>
+                        <input type="text" id="contactInfo" name="contactInfo" class="form-control" placeholder="Phone number or email where you can be reached" required>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label>Upload Photos (Optional but Recommended)</label>
+                        <div class="file-upload">
+                            <input type="file" id="itemPhotos" name="itemPhotos" class="file-upload-input" accept="image/*" multiple>
+                            <label for="itemPhotos" class="file-upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Click to upload photos of the found item</span>
+                                <small>Max file size: 5MB each. You can upload multiple photos.</small>
+                            </label>
+                        </div>
+                        <div class="file-preview" id="filePreview"></div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="additionalInfo">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" class="form-control" placeholder="Any other relevant information about where and how you found the item"></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-secondary">Clear Form</button>
+                    <button type="submit" class="btn btn-primary">Submit Report</button>
+                </div>
+            </form>
+            
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i>
+                <h3>Thank You for Reporting!</h3>
+                <p>Your found item report has been submitted successfully. We'll help connect you with the rightful owner.</p>
+                <p>You can <a href="index.html">return to the homepage</a> or <a href="reportfound.html">report another item</a>.</p>
+            </div>
+        </div>
+    </section>
+
+  
     <footer>
-     <div class="footer-contents">
+        <div class="footer-contents">
             <div class="contents">
                 <h6 data-aos="fade-down-right"
               data-aos-duration="1000"data-aos="fade-down-right"
@@ -102,22 +164,22 @@
                 </p>
                  <p><span>Tell:</span>653 07 80 80</p>
                  <p >BAMENDA,CAMEROON</p>
-                </div>
+            </div>
 
-                   <div class="contents">
+            <div class="contents">
                 <h6 data-aos="fade-down-right"
               data-aos-duration="1000"data-aos="fade-down-right"
               data-aos-duration="1000"> QUICK LINKS</h6>
                 <ul class="list">
                     <li><a href="lost.html">lost</a></li>
-                      <li><a href="found.html">found</a></li>
-                       <li><a href="reportlost.html">reportloss</a></li>
-                        <li><a href="reportfound.html">reportfound</a></li>
+                    <li><a href="found.html">found</a></li>
+                    <li><a href="reportlost.html">reportloss</a></li>
+                    <li><a href="reportfound.html">reportfound</a></li>
                 </ul>
             </div>
             
 
-                 <div class="contents">
+            <div class="contents">
                 <h6 data-aos="fade-down-right"
               data-aos-duration="1000"data-aos="fade-down-right"
               data-aos-duration="1000">FOLLOW US</h6>
@@ -129,15 +191,15 @@
                 </ul>
                 <img src="images/logo images.png" height="80px" width="80px" > 
             </div>
-            </div>
-            <div class="bottom-bar">
-                <p>&COPY; 2025 Digital Solution for Lost and Found Items in Cameroon. All right Reserved</p>
-            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&COPY; 2025 Digital Solution for Lost and Found Items in Cameroon. All right Reserved</p>
+        </div>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
 </script>
-    <script src="./main.js"></script>
+    <!-- <script src="./main.js"></script> -->
      </body>
      </html>

@@ -3,138 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REPORTFOUND FORM</title>
+    <title>Report Found Item - Digital Solution for Lost and Found</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="reportfound.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="reportfound.css">
 </head>
 <body>
-     <header>
-        <nav>
-            <div class="header-container">
-                <div class="logo">
-                    <a href="#">
-                    </a><img src="images/logo images.png" height="80px" width="80px" data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">
-                 </a>
-                </div>
-                <div  class="nav-links">
-                    <ul data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">
-                        <li>  <a href="index.html" class="active">Home</a></li>
-                        <li> <a href="reportloss.html">Report Lost</a></li>
-                        <li> <a href="reportfound.html">Report Found</a></li>
-                          <li><a href="community.html">Community</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-
-                </ul>
-                </div>
-                    <a href="signout.html" class="header-button" data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">Sign out</a>
+    <header>
+        <nav class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo images.png" alt="Logo" data-aos="fade-down-right" data-aos-duration="1000">
+                </a>
             </div>
+            <div class="nav-links">
+                <ul data-aos="fade-down-right" data-aos-duration="1000">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="reportloss.html">Report Lost</a></li>
+                    <li><a href="reportfound.html" class="active">Report Found</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="header-dropdown">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            <a href="signout.html" class="header-button" data-aos="fade-down-right" data-aos-duration="1000">Sign out</a>
         </nav>
     </header>
-
     
+    <section class="found-hero fade-in">
+        <h1>Report a Found Item</h1>
+        <p>Found something that might belong to someone else? Help reconnect lost items with their owners by providing details below.</p>
     </section>
-    <section  class="report-sec" >
-  <h2>Report Found Item</h2>
-  <p class="report-description">
-    Found something that might belong to someone else? Help reconnect lost 
-    items with their owners by filling out the form below. Provide clear details and, if possible, upload a photo to make it easier for the rightful owner to identify the item.
-  </p>
-  </section>
-
-<section id="foundItems"></section>
-
-
-     <section class="report-found">
-        <h2 >Report a found item</h2>
-        <form id="foundForm">
-            <div class="form-group">
-                <label for="itemName">
-                    Item Name
-                </label>
-                <input type="text" id="itemName" name="item Name" required>
+    
+    <section class="form-section">
+        <div class="form-container fade-in">
+            <h2>Report Found Item</h2>
+            <p class="form-description">
+                Provide clear details and, if possible, upload a photo to make it easier for the rightful owner to identify the item.
+            </p>
+            
+            <form id="foundItemForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="itemName">Item Name *</label>
+                        <input type="text" id="itemName" name="itemName" class="form-control" placeholder="e.g. Black wallet, iPhone, Keys" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category">Category *</label>
+                        <select id="category" name="category" class="form-control" required>
+                            <option value="">Select a category</option>
+                            <option>Electronics</option>
+                            <option>Jewelry</option>
+                            <option>Documents</option>
+                            <option>Clothing</option>
+                            <option>Bags & Wallets</option>
+                            <option>Keys</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="foundDate">Date Found *</label>
+                        <input type="date" id="foundDate" name="foundDate" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="foundLocation">Location Found *</label>
+                        <input type="text" id="foundLocation" name="foundLocation" class="form-control" placeholder="e.g. Bamenda Main Market, Douala Airport" required>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="description">Description *</label>
+                        <textarea id="description" name="description" class="form-control" placeholder="Provide a detailed description of the item, including brand, color, size, unique features, and any contents if applicable." required></textarea>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="contactInfo">Your Contact Information *</label>
+                        <input type="text" id="contactInfo" name="contactInfo" class="form-control" placeholder="Phone number or email where you can be reached" required>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label>Upload Photos (Optional but Recommended)</label>
+                        <div class="file-upload">
+                            <input type="file" id="itemPhotos" name="itemPhotos" class="file-upload-input" accept="image/*" multiple>
+                            <label for="itemPhotos" class="file-upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Click to upload photos of the found item</span>
+                                <small>Max file size: 5MB each. You can upload multiple photos.</small>
+                            </label>
+                        </div>
+                        <div class="file-preview" id="filePreview"></div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="additionalInfo">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" class="form-control" placeholder="Any other relevant information about where and how you found the item"></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-secondary">Clear Form</button>
+                    <button type="submit" class="btn btn-primary">Submit Report</button>
+                </div>
+            </form>
+            
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i>
+                <h3>Thank You for Reporting!</h3>
+                <p>Your found item report has been submitted successfully. We'll help connect you with the rightful owner.</p>
+                <p>You can <a href="index.html">return to the homepage</a> or <a href="reportfound.html">report another item</a>.</p>
             </div>
-            <div class="form-group">
-                <label for="category">Category</label>
-                <select id="category" name="category" required>
-                    <option value="Select"></option>
-                    <option>Phone</option>
-                      <option>Bag</option>
-                        <option>Wallet</option>
-                          <option>Keys</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="location">Found Location</label>
-                <input type="text" id="location" name="location" required>
-            </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea id="description" rows="4" required></textarea>
-            </div>
-            <div class="form-group" >
-                <label for="image">Upload Photo</label>
-                <input type="file" id="image" name="image">
-                <button type="button">Submit</button>
-                <p id="formMessage"></p>
-            </div>
-        </form>
+        </div>
     </section>
-
     
     <footer>
-     <div class="footer-contents">
+        <div class="footer-contents">
             <div class="contents">
-                <h6 data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">CONTACT US</h6>
-                <p> Contact Us:<a href="mailto:zohsynthia50@gmail.com">
-                    zohsynthia50@gmail.com</a>
-                <a href="mailto: cynthiazoh300@gmail.com"> cynthiazoh300@gmail.com</a>
-                </p>
-                 <p><span>Tell:</span>653 07 80 80</p>
-                 <p>BAMENDA,CAMEROON</p>
-                </div>
-
-                   <div class="contents">
-                <h6 data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000"> QUICK LINKS</h6>
+                <h6 data-aos="fade-down-right" data-aos-duration="1000">CONTACT US</h6>
+                <p>Email: <a href="mailto:zohsynthia50@gmail.com">zohsynthia50@gmail.com</a></p>
+                <p>Email: <a href="mailto:cynthiazoh300@gmail.com">cynthiazoh300@gmail.com</a></p>
+                <p>Phone: 653 07 80 80</p>
+                <p>BAMENDA, CAMEROON</p>
+            </div>
+            <div class="contents">
+                <h6 data-aos="fade-down-right" data-aos-duration="1000">QUICK LINKS</h6>
                 <ul class="list">
-                    <li><a href="lost.html">lost</a></li>
-                      <li><a href="found.html">found</a></li>
-                       <li><a href="reportlost.html">reportloss</a></li>
-                        <li><a href="reportfound.html">reportfound</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="reportloss.html">Report Lost</a></li>
+                    <li><a href="reportfound.html">Report Found</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                 </ul>
             </div>
-            
-                 <div class="contents">
-                <h6 data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">FOLLOW US</h6>
+            <div class="contents">
+                <h6 data-aos="fade-down-right" data-aos-duration="1000">FOLLOW US</h6>
                 <ul class="social-icons">
-                    <li><a href=""> <i class=" fa-brands fa-whatsapp"></i></a></li>
-                    <li> <a href=""><i class="fa-brands fa-facebook"></i></a> </li>
-                    <li><a href=""><i class="fa-brands fa-tiktok"></i></a> </li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
                     <li><a href="https://github.com/Synthia-50zoh"><i class="fa-brands fa-github"></i></a></li>
                 </ul>
-                <img src="images/logo images.png" height="80px" width="80px"> 
+                <img src="images/logo images.png" alt="Logo" class="content-image">
             </div>
-            </div>
-            <div class="bottom-bar">
-                <p>&COPY; 2025 Digital Solution for Lost and Found Items in Cameroon. All right Reserved</p>
-            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2025 Digital Solution for Lost and Found Items in Cameroon. All rights Reserved</p>
+        </div>
     </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-</script>
-    <script src="./found.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+        
+        // File upload preview functionality
+        document.getElementById('itemPhotos').addEventListener('change', function(e) {
+            const files = e.target.files;
+            const previewContainer = document.getElementById('filePreview');
+            previewContainer.innerHTML = '';
+            
+            if (files.length > 0) {
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    
+                    if (file.type.startsWith('image/')) {
+                        const reader = new FileReader();
+                        
+                        reader.onload = function(e) {
+                            const previewItem = document.createElement('div');
+                            previewItem.className = 'file-preview-item';
+                            
+                            previewItem.innerHTML = `
+                                <img src="${e.target.result}" alt="Preview">
+                                <button type="button" class="remove-btn" data-index="${i}">&times;</button>
+                            `;
+                            
+                            previewContainer.appendChild(previewItem);
+                            
+                            // Add event listener to remove button
+                            previewItem.querySelector('.remove-btn').addEventListener('click', function() {
+                                removeFileFromInput(i);
+                                previewItem.remove();
+                            });
+                        };
+                        
+                        reader.readAsDataURL(file);
+                    }
+                }
+            }
+        });
+        
+        // Function to remove file from input
+        function removeFileFromInput(index) {
+            const input = document.getElementById('itemPhotos');
+            const files = Array.from(input.files);
+            files.splice(index, 1);
+            
+            // Create a new FileList (not directly mutable, so we use DataTransfer)
+            const dt = new DataTransfer();
+            files.forEach(file => dt.items.add(file));
+            input.files = dt.files;
+        }
+        
+        // Form submission handler
+        document.getElementById('foundItemForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const requiredFields = this.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = 'red';
+                } else {
+                    field.style.borderColor = '#ddd';
+                }
+            });
+            
+            if (isValid) {
+                // In a real application, you would send the data to a server here
+                // For demonstration, we'll show a success message
+                
+                // Hide the form
+                this.style.display = 'none';
+                
+                // Show success message
+                document.getElementById('successMessage').style.display = 'block';
+                
+                // You could also redirect or reset the form after a delay
+                // setTimeout(() => {
+                //     this.reset();
+                //     this.style.display = 'block';
+                //     document.getElementById('successMessage').style.display = 'none';
+                //     document.getElementById('filePreview').innerHTML = '';
+                // }, 5000);
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+        
+        // Set maximum date to today for found date field
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('foundDate').setAttribute('max', today);
+        
+        // Mobile menu toggle
+        document.querySelector('.header-dropdown').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links ul');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100px';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.backgroundColor = 'var(--white)';
+                navLinks.style.padding = '1rem';
+                navLinks.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
 </body>
 </html>

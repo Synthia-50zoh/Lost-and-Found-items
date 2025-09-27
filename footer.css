@@ -21,8 +21,9 @@ h6{
     font-size: 28px;
     color: royalblue;
 }
-.footer-contents p{  
-      width: 200px;
+.footer-contents p{ 
+    font-size: 1.5rem; 
+    width: 200px;
     margin: auto;
     padding: 3px;
     color: #e5e5e5;
@@ -86,6 +87,9 @@ h6{
     text-align: center;
     padding-top: 1rem;
 }
+.social-icons{
+    gap: 1rem;
+}
 a{
     text-decoration: none;
 }
@@ -111,8 +115,11 @@ a:hover{
     font-size: 20px;
     padding: 7px;
 }
-.footer-content img{
-    margin-left:20px ;
+.content-image{
+    display: flex;
+    margin-left: 4rem;
+    margin-top: 1.5rem;
+
 }
 
 

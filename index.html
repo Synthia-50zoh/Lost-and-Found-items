@@ -4,234 +4,223 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Solution For Lost And Found Items</title>
-    <!-- <link rel="stylesheet" href="login.css"> -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header class="">
+    <header>
         <nav class="header-container">
             <div class="logo">
                 <a href="#">
-                </a><img src="images/logo images.png" height="80px" width="80px" data-aos="fade-down-right"
-                    data-aos-duration="1000"data-aos="fade-down-right"
-                    data-aos-duration="1000">
+                    <img src="images/logo images.png" alt="Logo" data-aos="fade-down-right" data-aos-duration="1000">
                 </a>
             </div>
-            <div  class="nav-links">
-                <!-- expanded -->
+            <div class="nav-links">
                 <div class="links">
-                    <ul data-aos="fade-down-right"
-                        data-aos-duration="1000"data-aos="fade-down-right"
-                        data-aos-duration="1000">
-                        <li>  <a href="index.html" class="active">Home</a></li>
-                        <li> <a href="reportloss.html">Report Lost</a></li>
-                        <li> <a href="reportfound.html">Report Found</a></li>
+                    <ul data-aos="fade-down-right" data-aos-duration="1000">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="lost.html">Report Lost</a></li>
+                        <li><a href="reportfound.html">Report Found</a></li>
                         <li><a href="community.html">Community</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="links-mobile">
-                    <div class="header-dropdown">
-                        <i class="fa fa-bars" aria-hidden="true"></i>
-                    </div>
-                    <ul data-aos="fade-down-right"
-                        data-aos-duration="1000"data-aos="fade-down-right"
-                        data-aos-duration="1000">
-                        <li>  <a href="index.html" class="active">Home</a></li>
-                        <li> <a href="reportloss.html">Report Lost</a></li>
-                        <li> <a href="reportfound.html">Report Found</a></li>
-                        <li><a href="community.html">Community</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
+                <div class="header-dropdown">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
                 </div>
                 <div class="signout-btn">
-                    <a href="signout.html" class="header-button" data-aos="fade-down-right"
-                        data-aos-duration="1000"data-aos="fade-down-right"
-                        data-aos-duration="1000">Sign out</a>
+                    <a href="#" class="header-button" data-aos="fade-down-right" data-aos-duration="1000">Sign out</a>
                 </div>
-
             </div>
         </nav>
     </header>
     
-    <!-- <div id="loginOverlay" class="loginOverlay">
-         <div class="login-container" >
-                <h6>Login</h6>
-                <form  id="login-form" action="index.html">
-                    <label for="username">Username/Email:</label>
-                    <input type="text" id="username" name="username" required>
-                    <label for="password">password:</label>
-                    <input type="password" id="password" name="password" required>
-                    <button type="submit">Login</button>
-                    <p>Don`t have an account?<a href="index.html">Create an account</a><br>
-                         <a href="#">Forget password</a></p>
-                </form>
-             </div>
-     </div> -->
-
-    <section class=" mainPage-section">
-        <div  class="mainPage">
+    <section class="mainPage-section">
+        <div class="mainPage">
             <div>
-                <h1> <span class="recover">Find</span> & Recover</h1>
-                <h1 class="find">With <span class="recover">Ease</span></h1>
+                <h1><span class="recover">Find</span> & Recover</h1>
+                <h1>With <span class="recover">Ease</span></h1>
             </div>
             <div>
-                <span class="text">Experience effortless recovery with our dedicated lost and found services</span>
+                <p class="text">Experience effortless recovery with our dedicated lost and found services</p>
+                <div class="search-section">
+                    <h2>Search Items</h2>
+                    <input type="text" placeholder="Search by name or keyword">
+                    <button class="btn-form">Search</button>
+                </div>
             </div>
         </div>
         <div class="lost-items">
             <div class="buttons">
-                <a href="reportloss.html" class="lost-button">Lost</a>
+                <a href="lost.html" class="lost-button">Lost</a>
                 <a href="reportfound.html" class="found-button">Found</a>
             </div>
             <div class="image-22">
-                <img src="images/micomput.jpeg" width="500px" height="300px" >
-            </div>
-        </div> 
-    </section>
-
-    <section class="welcome-section">
-        <h2>Find Your Way Back to What`s Yours</h2>
-        <p>Welcome to our most recent lost and found items section ,where you`ll find a Lost
-            curated list of the latest items reported<br> by our community.Browse through our 
-            collection and see if you can find what`s missing.Whether you`ve lost something 
-            or found <br>an item that doesn`t belong to you, my platform is here to help you reunite
-            with it`s rightfull owner
-        </p>
-                    <div class="card-wrapper">
-                    <div class="card-container">
-                     <img src="images/laptp.jpeg" width="300px" height="300px">
-                       <div class="card-middle"><i class="fa-brands fa-searchengin"></i><span>Laptop </span></div>
-                       <div class="card-middle"> <i class="fa-solid fa-location-dot"></i> <span>Location</span></div>
-                       <div class="card-middle"><i class="fa-solid fa-calendar-check"></i><span> Time & Date</span></div>
-                              <a href="image.html" class= "btn-card"> View More</a>
-                     </div>
-                     <div class="card-container">
-                        <img src="images/iphone.jpeg" width="300px" height="300px">
-                          <div class="card-middle"><i class="fa-brands fa-searchengin"></i><span>Phone</span> </div>
-                       <div class="card-middle"> <i class="fa-solid fa-location-dot"></i><span>Location</span> </div>
-                       <div class="card-middle"><i class="fa-solid fa-calendar-check"></i><span>Time & Date</span> </div>
-                         <a href="image.html" class="btn-card">View More</a>
-                        </div>
-                        <div class="card-container">
-                          <img src="images/Guitar classic.jpeg" width="300px" height="300px">
-                            <div class="card-middle"><i class="fa-brands fa-searchengin"></i><span>Guitar Clasic</span></div>
-                       <div class="card-middle"> <i class="fa-solid fa-location-dot"></i><span>Location</span> </div>
-                       <div class="card-middle"><i class="fa-solid fa-calendar-check"></i><span>Time & Date</span> </div>
-                         <a href="image.html" class="btn-card">View More</a>
-                        </div>
-                    </div>
-
-    </section>
-
-
-
-    <section class="about-section">
-        <h3>How It Works</h3>
-        <p>
-            Our platform bridges the gap between lost and found items in cameroon, providing
-            a digital space where people can report<br> lost items,find recover belongings and 
-            connect with others.We aim to create a seamless and efficient experience, reuniting <br>
-            individuals with thier lost possetions and fostrering a sense of community and trust
-        </p>
-        <div class="cards-box">
-            <div class="cards">
-                <h4>Mission</h4>
-                <p> Our vision is to provide a reliable and efficient digital platform for 
-                    lost and found items in Cameroon, bridging the gap between individuals
-                    and thier belongings, while fostering a sense of community and trust
-                </p>
-                 <a href=""><img src="images/wallet.jpeg.jpeg " width="100px" height="80px" alt=""></a>
-            </div>
-            <div class="cards">
-                <h4>Vision</h4>
-                <p>
-                    Our vision is to become the to-go platform for lost and found items in Cameroon;
-                    leveraging technology to create a more connected and organised society where,
-                    people can easily recover their lost items and return found ones to their 
-                    rightful owners
-                </p>
-                    <a href=""><img src="images/wallet.jpeg.jpeg"  width="100px" height="80px" alt=""></a>
-            </div>
-            <div class="cards">
-                <h4>Values</h4>
-                <p>
-                    Integrity: We prioritize transparency and honesty in all our interactions
-                    Community: We believe in the power of community and strive to create a platform 
-                    that brings people together, helping them to reconnect with thier lost items.
-                    Efficiecncy: We`re commited to providing a seamless and efficient.
-                </p>
-                           <a href=""><img src="images/wallet.jpeg.jpeg"  width="100px" height="80px" alt=""></a>
+                <img src="images/micomput.jpeg" alt="Lost and Found Items">
             </div>
         </div>
     </section>
 
+    <section class="welcome-section">
+        <h2>Find Your Way Back to What's Yours</h2>
+        <p>Welcome to our most recent lost and found items section, where you'll find a curated list of the latest items reported by our community.</p>
+        <div class="card-wrapper">
+            <div class="card-container">
+                <img src="images/laptp.jpeg" alt="Laptop">
+                <div class="card-middle">
+                    <p><i class="fa-brands fa-searchengin"></i> Laptop</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Bamenda, Cameroon</p>
+                    <p><i class="fa-solid fa-calendar-check"></i> May 28, 2025</p>
+                </div>
+                <a href="image.html" class="btn-card">View More</a>
+            </div>
+            <div class="card-container">
+                <img src="images/iphone.jpeg" alt="Phone">
+                <div class="card-middle">
+                    <p><i class="fa-brands fa-searchengin"></i> Phone</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Douala, Cameroon</p>
+                    <p><i class="fa-solid fa-calendar-check"></i> May 25, 2025</p>
+                </div>
+                <a href="image.html" class="btn-card">View More</a>
+            </div>
+            <div class="card-container">
+                <img src="images/Guitar classic.jpeg" alt="Guitar">
+                <div class="card-middle">
+                    <p><i class="fa-brands fa-searchengin"></i> Guitar Classic</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Yaounde, Cameroon</p>
+                    <p><i class="fa-solid fa-calendar-check"></i> May 20, 2025</p>
+                </div>
+                <a href="image.html" class="btn-card">View More</a>
+            </div>
+            <div class="card-container">
+                <img src="images/id card.jpg" alt="ID Card">
+                <div class="card-middle">
+                    <p><i class="fa-brands fa-searchengin"></i> ID Cards</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Buea, Cameroon</p>
+                    <p><i class="fa-solid fa-calendar-check"></i> May 15, 2025</p>
+                </div>
+                <a href="image.html" class="btn-card">View More</a>
+            </div>
+        </div>
+    </section>
 
+    <section class="work-section">
+        <h3>How It Works</h3>
+        <p class="para">Discover the simplicity of reuniting with your lost treasures and rediscover the joy of being reunited with what's truly yours.</p>
+        <div class="cards-box">
+            <div class="cards">
+                <h4>Report an Item</h4>
+                <img src="images/format.jpg" alt="Report Item">
+                <p>Report your lost or found item by filling out our simple form.</p>
+            </div>
+            <div class="cards">
+                <h4>Search for Matches</h4>
+                <img src="images/id card.jpg" alt="Search Items">
+                <p>Browse through our database to find your lost item or the owner of a found item.</p>
+            </div>
+            <div class="cards">
+                <h4>Connect with Others</h4>
+                <img src="images/two people.jpeg" alt="Connect">
+                <p>Contact the person who reported the item you're looking for, or vice versa.</p>
+            </div>
+            <div class="cards">
+                <h4>Verify and Reclaim</h4>
+                <img src="images/youh.jpeg" alt="Verify">
+                <p>Meet with the finder and verify ownership before collecting your item.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <h3>Testimonials</h3>
+        <p class="par">What Our Users Say</p>
+        <div class="cardss-box">
+            <div class="cardss">
+                <img src="images/Blessing.jpg" alt="Blessing">
+                <p>"I found my lost phone in just one day! This platform is amazing!" - Blessing, Douala</p>
+                <img src="images/star.jpeg" alt="Rating" class="image">
+            </div>
+            <div class="cardss">
+                <img src="images/Clovis (1).jpg" alt="Clovis">
+                <p>"Can't believe I got my laptop back after weeks of searching - I highly recommend this platform" - Clovis, Douala</p>
+                <img src="images/star.jpeg" alt="Rating" class="image">
+            </div>
+            <div class="cardss">
+                <img src="images/Clovis (2).jpg" alt="Rachel">
+                <p>"I thought I'd never see my ID again, but your team made it possible! I appreciate" - Rachel, Yaounde</p>
+                <img src="images/star.jpeg" alt="Rating" class="image">
+            </div>
+            <div class="cardss">
+                <img src="images/Favor.jpeg" alt="Favor">
+                <p>"The community here is so helpful. I found my lost bag within hours!" - Favor, Bamenda</p>
+                <img src="images/star.jpeg" alt="Rating" class="image">
+            </div>
+        </div>
+    </section>
 
     <section class="community-section">
-           <a href="community.html" class="btn-community">Join Community</a>
-    <h5>Support Us</h5>
-    <p>
-        Join our community of helpers and finders to make a difference in cameroon. Together, we
-        can reunite lost items with their owners and build a more caring society. By joining our community,
-        you`ll part of a movement that values kindness,compasion and connection. you`ll have the opportunuty
-        to make a positive impact in the lives of others, and help creat a more organized and connected community.
-        Whether you`ve lost something precious or found an item that belongs to someone else, we invite you to join
-        us in our mission to make a difference, one lost item at a time
-    </p>
+        <a href="community.html" class="btn-community">Join Our Community</a>
+        <h5>Support Us</h5>
+        <p>Join our community of helpers and finders to make a difference in Cameroon. Together, we can reunite lost items with their owners and build a more caring society. By joining our community, you'll be part of a movement that values kindness, compassion and connection. You'll have the opportunity to make a positive impact in the lives of others, and help create a more organized and connected community. Whether you've lost something precious or found an item that belongs to someone else, we invite you to join us in our mission to make a difference, one lost item at a time.</p>
     </section>
 
     <footer>
-     <div class="footer-contents">
+        <div class="footer-contents">
             <div class="contents">
-                <h6 data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">CONTACT US</h6>
-                <p> Contact Us:<a href="mailto:zohsynthia50@gmail.com">
-                    zohsynthia50@gmail.com</a>
-                <a href="mailto: cynthiazoh300@gmail.com"> cynthiazoh300@gmail.com</a>
-                </p>
-                 <p><span>Tell:</span>653 07 80 80</p>
-                 <p>BAMENDA,CAMEROON</p>
-                </div>
-
-                   <div class="contents">
-                <h6 data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000"> QUICK LINKS</h6>
+                <h6 data-aos="fade-down-right" data-aos-duration="1000">CONTACT US</h6>
+                <p>Email: <a href="mailto:zohsynthia50@gmail.com">zohsynthia50@gmail.com</a></p>
+                <p>Email: <a href="mailto:cynthiazoh300@gmail.com">cynthiazoh300@gmail.com</a></p>
+                <p>Phone: 653 07 80 80</p>
+                <p>BAMENDA, CAMEROON</p>
+            </div>
+            <div class="contents">
+                <h6 data-aos="fade-down-right" data-aos-duration="1000">QUICK LINKS</h6>
                 <ul class="list">
-                    <li><a href="lost.html">lost</a></li>
-                      <li><a href="found.html">found</a></li>
-                       <li><a href="reportlost.html">reportloss</a></li>
-                        <li><a href="reportfound.html">reportfound</a></li>
+                    <li><a href="lost.html">Lost</a></li>
+                    <li><a href="found.html">Found</a></li>
+                    <li><a href="reportlost.html">Report Loss</a></li>
+                    <li><a href="reportfound.html">Report Found</a></li>
                 </ul>
             </div>
-
-                 <div class="contents">
-                <h6 data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">FOLLOW US</h6>
+            <div class="contents">
+                <h6 data-aos="fade-down-right" data-aos-duration="1000">FOLLOW US</h6>
                 <ul class="social-icons">
-                    <li><a href=""> <i class=" fa-brands fa-whatsapp"></i></a></li>
-                    <li> <a href=""><i class="fa-brands fa-facebook"></i></a> </li>
-                    <li><a href=""><i class="fa-brands fa-tiktok"></i></a> </li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
                     <li><a href="https://github.com/Synthia-50zoh"><i class="fa-brands fa-github"></i></a></li>
                 </ul>
-                <img src="images/logo images.png" height="80px" width="80px" > 
+                <img src="images/logo images.png" alt="Logo" class="content-image">
             </div>
-            </div>
-            <div class="bottom-bar">
-                <p>&COPY; 2025 Digital Solution for Lost and Found Items in Cameroon. All right Reserved</p>
-            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2025 Digital Solution for Lost and Found Items in Cameroon. All rights Reserved</p>
+        </div>
     </footer>
-            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script>
-    AOS.init();
-    </script>
-    <!-- <script src="./login.js"></script> -->
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        
+        // Mobile menu toggle
+        document.querySelector('.header-dropdown').addEventListener('click', function() {
+            const navLinks = document.querySelector('.links ul');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100px';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.backgroundColor = 'var(--white)';
+                navLinks.style.padding = '1rem';
+                navLinks.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
 </body>
 </html>

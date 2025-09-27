@@ -3,129 +3,1058 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>images</title>
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="image.css">
+    <title>Lost & Found Gallery - Digital Solution for Lost and Found</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #ff6b35;
+            --accent: #2a9d8f;
+            --light: #f5f7fa;
+            --dark: #333;
+            --white: #ffffff;
+            --gray: #95a5a6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--light);
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        
+        /* Header Styles */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--white);
+            height: 100px;
+            padding: 0 5%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo img {
+            height: 70px;
+            width: auto;
+        }
+        
+        .nav-links ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--secondary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .header-button {
+            background-color: var(--secondary);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .header-button:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .header-dropdown {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .gallery-hero {
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('images/gallery-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 5% 5%;
+            text-align: center;
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .gallery-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .gallery-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Filter Section */
+        .filter-section {
+            padding: 2rem 5%;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .filter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .filter-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-right: 1rem;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .filter-btn {
+            background-color: var(--light);
+            border: 1px solid #ddd;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--secondary);
+            color: var(--white);
+            border-color: var(--secondary);
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            padding: 3rem 5%;
+        }
+        
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .image-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            position: relative;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .image-card:hover .image-container img {
+            transform: scale(1.05);
+        }
+        
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 25, 47, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .image-card:hover .image-overlay {
+            opacity: 1;
+        }
+        
+        .view-btn {
+            background-color: var(--secondary);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .view-btn:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .image-info {
+            padding: 1.5rem;
+        }
+        
+        .image-info h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .image-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .image-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        .image-meta i {
+            color: var(--secondary);
+        }
+        
+        .image-status {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .status-found {
+            background-color: rgba(42, 157, 143, 0.2);
+            color: var(--accent);
+        }
+        
+        .status-lost {
+            background-color: rgba(255, 107, 53, 0.2);
+            color: var(--secondary);
+        }
+        
+        .status-claimed {
+            background-color: rgba(46, 204, 113, 0.2);
+            color: #2ecc71;
+        }
+        
+        /* Load More Button */
+        .load-more {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .load-btn {
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .load-btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 3rem 5% 1rem;
+            margin-top: 5rem;
+        }
+        
+        .footer-contents {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contents h6 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .contents p, .contents a {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .contents a:hover {
+            color: var(--secondary);
+        }
+        
+        .list {
+            list-style: none;
+        }
+        
+        .list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .list a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .list a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .content-image {
+            max-width: 80px;
+            height: auto;
+        }
+        
+        .bottom-bar {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            border-radius: 10px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--secondary);
+            color: var(--white);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-body {
+            padding: 2rem;
+        }
+        
+        .modal-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-info h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .modal-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .detail-label {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+        
+        .claim-section {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+        }
+        
+        .claim-section h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .claim-btn {
+            background-color: var(--accent);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin-top: 1rem;
+        }
+        
+        .claim-btn:hover {
+            background-color: #21867a;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 3%;
+            }
+            
+            .nav-links ul {
+                display: none;
+            }
+            
+            .header-dropdown {
+                display: block;
+            }
+            
+            .gallery-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .image-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .filter-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .filter-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-body {
+                padding: 1.5rem;
+            }
+            
+            .modal-image {
+                height: 250px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
-     <header>
-        <nav>
-            <div class="header-container">
-                <div class="logo">
-                    <a href="#">
-                    </a><img src="images/logo images.png" height="80px" width="80px" data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">
-                 </a>
-                </div>
-                <div  class="nav-links">
-                    <ul data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">
-                        <li>  <a href="index.html" class="active">Home</a></li>
-                        <li> <a href="reportloss.html">Report Lost</a></li>
-                        <li> <a href="reportfound.html">Report Found</a></li>
-                        <li><a href="community.html">Community</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-                </div>
-                    <a href="signout.html" class="header-button" data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">Sign out</a>
+    <header>
+        <nav class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo images.png" alt="Logo" data-aos="fade-down-right" data-aos-duration="1000">
+                </a>
             </div>
+            <div class="nav-links">
+                <ul data-aos="fade-down-right" data-aos-duration="1000">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="reportloss.html">Report Lost</a></li>
+                    <li><a href="reportfound.html">Report Found</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="header-dropdown">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            <a href="signout.html" class="header-button" data-aos="fade-down-right" data-aos-duration="1000">Sign out</a>
         </nav>
     </header>
-
-    <div class="image-grid">
-        <div class="image-container">
-            <img src="images/keys.jpeg.jpeg" width="600px " height="600px">
-            <p>keys</p>
+    
+    <section class="gallery-hero">
+        <h1>Lost & Found Gallery</h1>
+        <p>Browse through recently reported lost and found items. Use filters to narrow down your search.</p>
+    </section>
+    
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-title">Filter by:</div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Items</button>
+                <button class="filter-btn" data-filter="found">Found Items</button>
+                <button class="filter-btn" data-filter="lost">Lost Items</button>
+                <button class="filter-btn" data-filter="electronics">Electronics</button>
+                <button class="filter-btn" data-filter="personal">Personal Items</button>
+                <button class="filter-btn" data-filter="documents">Documents</button>
+                <button class="filter-btn" data-filter="documents"> Clotthes</button>
+                <button class="filter-btn" data-filter="documents">Groceries</button>
+            </div>
         </div>
-         <div class="image-container">
-            <img src="images/paino.jpeg.jpeg" width="600px " height="600px">
-            <p>Piano</p>
+    </section>
+    
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <div class="image-grid" id="imageGallery">
+                <!-- Image cards will be populated by JavaScript -->
+            </div>
+            <div class="load-more">
+                <button class="load-btn" id="loadMore">Load More Items</button>
+            </div>
         </div>
-         <div class="image-container">
-            <img src="images/wallet.jpeg.jpeg" width="600px " height="600px" >
-            <p>Wallet</p>
+    </section>
+    
+    <!-- Modal for image details -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
         </div>
-         <div class="image-container">
-            <img src="images/missing child.jpeg.jpeg" width="600px " height="600px" >
-            <p>Chid</p>
-        </div>
-         <div class="image-container">
-            <img src="images/phone.jpeg" width="600px " height="600px">
-            <p>Phone</p>
-        </div>
-         <div class="image-container">
-            <img src="images/smallbag.jpeg" width="600px " height="600px">
-            <p>hangbag</p>
-        </div>
-         <div class="image-container">
-            <img src="images/LOGAAGES.jpg" width="600px " height="600px">
-            <p>Loggages</p>
-        </div>
-        <div class="image-container">
-            <img src="images/shoe.jpg" width="600px " height="600px">
-            <p>Shoe</p>
-        </div>
-        
-        <!--
-         <div class="image-container">
-            <img src="images/Guitar classic.jpeg" width="600px " height="600px">
-            <p>GuitarClssic</p>
-         -->
-         
     </div>
-
     
     <footer>
-     <div class="footer-contents">
+        <div class="footer-contents">
             <div class="contents">
-                <h6 data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">CONTACT US</h6>
-                <p> Contact Us:<a href="mailto:zohsynthia50@gmail.com">
-                    zohsynthia50@gmail.com</a>
-                <a href="mailto: cynthiazoh300@gmail.com"> cynthiazoh300@gmail.com</a>
-                </p>
-                 <p><span>Tell:</span>653 07 80 80</p>
-                 <p>BAMENDA,CAMEROON</p>
-                </div>
-
-                   <div class="contents">
-                <h6 data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000"> QUICK LINKS</h6>
+                <h6 data-aos="fade-down-right" data-aos-duration="1000">CONTACT US</h6>
+                <p>Email: <a href="mailto:zohsynthia50@gmail.com">zohsynthia50@gmail.com</a></p>
+                <p>Email: <a href="mailto:cynthiazoh300@gmail.com">cynthiazoh300@gmail.com</a></p>
+                <p>Phone: 653 07 80 80</p>
+                <p>BAMENDA, CAMEROON</p>
+            </div>
+            <div class="contents">
+                <h6 data-aos="fade-down-right" data-aos-duration="1000">QUICK LINKS</h6>
                 <ul class="list">
-                    <li><a href="lost.html">lost</a></li>
-                      <li><a href="found.html">found</a></li>
-                       <li><a href="reportlost.html">reportloss</a></li>
-                        <li><a href="reportfound.html">reportfound</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="reportloss.html">Report Lost</a></li>
+                    <li><a href="reportfound.html">Report Found</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                 </ul>
             </div>
-
-                 <div class="contents">
-                <h6 data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">FOLLOW US</h6>
+            <div class="contents">
+                <h6 data-aos="fade-down-right" data-aos-duration="1000">FOLLOW US</h6>
                 <ul class="social-icons">
-                    <li><a href=""> <i class=" fa-brands fa-whatsapp"></i></a></li>
-                    <li> <a href=""><i class="fa-brands fa-facebook"></i></a> </li>
-                    <li><a href=""><i class="fa-brands fa-tiktok"></i></a> </li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
                     <li><a href="https://github.com/Synthia-50zoh"><i class="fa-brands fa-github"></i></a></li>
                 </ul>
-                <img src="images/logo images.png" height="80px" width="80px" > 
+                <img src="images/logo images.png" alt="Logo" class="content-image">
             </div>
-            </div>
-            <div class="bottom-bar">
-                <p>&COPY; 2025 Digital Solution for Lost and Found Items in Cameroon. All right Reserved</p>
-            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2025 Digital Solution for Lost and Found Items in Cameroon. All rights Reserved</p>
+        </div>
     </footer>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script>
-    AOS.init();
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+        
+        // Sample data for gallery items
+        const galleryItems = [
+            {
+                id: 1,
+                name: "Set of Keys",
+                image: "images/keys.jpeg",
+                category: "personal",
+                status: "found",
+                location: "Bamenda",
+                date: "2025-05-28",
+                description: "Found near the commercial avenue. Includes car key and several house keys."
+            },
+            {
+                id: 2,
+                name: "Piano Keyboard",
+                image: "images/paino.jpeg",
+                category: "electronics",
+                status: "lost",
+                location: "Douala",
+                date: "2025-05-25",
+                description: "Yamaha portable keyboard lost during relocation. Has sentimental value."
+            },
+            {
+                id: 3,
+                name: "Leather Wallet",
+                image: "images/wallet.jpeg",
+                category: "personal",
+                status: "found",
+                location: "Yaounde",
+                date: "2025-05-20",
+                description: "Black leather wallet found at a restaurant. Contains identification cards."
+            },
+            {
+                id: 4,
+                name: "Missing Child Poster",
+                image: "images/missing child.jpeg",
+                category: "documents",
+                status: "lost",
+                location: "Buea",
+                date: "2025-05-15",
+                description: "Help us find this missing child last seen near the university campus."
+            },
+            {
+                id: 5,
+                name: "Smartphone",
+                image: "images/phone.jpeg",
+                category: "electronics",
+                status: "found",
+                location: "Bamenda",
+                date: "2025-05-10",
+                description: "iPhone found in a taxi. Black case with cracked screen protector."
+            },
+            {
+                id: 6,
+                name: "Handbag",
+                image: "images/smallbag.jpeg",
+                category: "personal",
+                status: "lost",
+                location: "Douala",
+                date: "2025-05-05",
+                description: "Small black handbag lost at the airport. Contains important documents."
+            },
+            {
+                id: 7,
+                name: "Luggage",
+                image: "images/LOGAAGES.jpg",
+                category: "personal",
+                status: "found",
+                location: "Yaounde",
+                date: "2025-05-01",
+                description: "Large blue suitcase found at the bus station. No identification tags."
+            },
+            {
+                id: 8,
+                name: "Sneakers",
+                image: "images/shoe.jpg",
+                category: "personal",
+                status: "lost",
+                location: "Buea",
+                date: "2025-04-28",
+                description: "White sneakers lost during a hiking trip. Brand: Nike."
+            },
+            {
+                id: 9,
+                name: "Laptop",
+                image: "images/laptp.jpeg",
+                category: "electronics",
+                status: "found",
+                location: "Bamenda",
+                date: "2025-04-25",
+                description: "Dell laptop found at a coffee shop. Silver color, 15-inch screen."
+            },
+            {
+                id: 10,
+                name: "ID Card",
+                image: "images/id card.jpg",
+                category: "documents",
+                status: "found",
+                location: "Douala",
+                date: "2025-04-20",
+                description: "University student ID card found near the campus library."
+            },
+            {
+                id: 11,
+                name: "Camera",
+                image: "images/camera.jpg",
+                category: "electronics",
+                status: "lost",
+                location: "Yaounde",
+                date: "2025-04-15",
+                description: "Canon DSLR camera lost during a photography event."
+            },
+            {
+                id: 12,
+                name: "Watch",
+                image: "images/watch.jpg",
+                category: "personal",
+                status: "found",
+                location: "Buea",
+                date: "2025-04-10",
+                description: "Silver wristwatch found at a restaurant. Brand: Casio."
+            }
+        ];
+        
+        // Function to display gallery items
+        function displayGalleryItems(items, container) {
+            container.innerHTML = '';
+            
+            if (items.length === 0) {
+                container.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+                        <i class="fas fa-search" style="font-size: 3rem; color: #95a5a6; margin-bottom: 1rem;"></i>
+                        <h3 style="color: #0a192f; margin-bottom: 1rem;">No items found</h3>
+                        <p style="color: #666;">Try adjusting your filters or check back later for new items.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            items.forEach(item => {
+                const statusClass = item.status === 'found' ? 'status-found' : 
+                                  item.status === 'lost' ? 'status-lost' : 'status-claimed';
+                
+                const statusText = item.status === 'found' ? 'Found' : 
+                                 item.status === 'lost' ? 'Lost' : 'Claimed';
+                
+                const itemElement = document.createElement('div');
+                itemElement.className = 'image-card';
+                itemElement.setAttribute('data-category', item.category);
+                itemElement.setAttribute('data-status', item.status);
+                
+                itemElement.innerHTML = `
+                    <div class="image-container">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="image-overlay">
+                            <button class="view-btn" data-id="${item.id}">View Details</button>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <h3>${item.name}</h3>
+                        <div class="image-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> ${item.location}</span>
+                            <span><i class="fas fa-calendar-alt"></i> ${formatDate(item.date)}</span>
+                        </div>
+                        <span class="image-status ${statusClass}">${statusText}</span>
+                    </div>
+                `;
+                
+                container.appendChild(itemElement);
+            });
+            
+            // Add event listeners to view buttons
+            document.querySelectorAll('.view-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const itemId = parseInt(this.getAttribute('data-id'));
+                    openModal(itemId);
+                });
+            });
+        }
+        
+        // Function to format date
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString(undefined, options);
+        }
+        
+        // Function to open modal with item details
+        function openModal(itemId) {
+            const item = galleryItems.find(i => i.id === itemId);
+            if (!item) return;
+            
+            const statusClass = item.status === 'found' ? 'status-found' : 
+                              item.status === 'lost' ? 'status-lost' : 'status-claimed';
+            
+            const statusText = item.status === 'found' ? 'Found' : 
+                             item.status === 'lost' ? 'Lost' : 'Claimed';
+            
+            const modalBody = document.getElementById('modalBody');
+            modalBody.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" class="modal-image">
+                <div class="modal-info">
+                    <h2>${item.name}</h2>
+                    <span class="image-status ${statusClass}">${statusText}</span>
+                    
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Category</span>
+                            <span>${item.category.charAt(0).toUpperCase() + item.category.slice(1)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Location</span>
+                            <span>${item.location}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Date</span>
+                            <span>${formatDate(item.date)}</span>
+                        </div>
+                    </div>
+                    
+                    <p>${item.description}</p>
+                    
+                    <div class="claim-section">
+                        <h3>Claim This Item</h3>
+                        <p>If this is your item or you have information about it, please contact us to arrange for its return.</p>
+                        <button class="claim-btn">Contact About This Item</button>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('imageModal').classList.add('active');
+        }
+        
+        // Function to filter items
+        function filterItems() {
+            const filter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+            const container = document.getElementById('imageGallery');
+            
+            let filteredItems;
+            if (filter === 'all') {
+                filteredItems = galleryItems;
+            } else {
+                filteredItems = galleryItems.filter(item => 
+                    item.category === filter || item.status === filter
+                );
+            }
+            
+            // Show only first 8 items initially
+            const initialItems = filteredItems.slice(0, 8);
+            displayGalleryItems(initialItems, container);
+            
+            // Update load more button
+            const loadMoreBtn = document.getElementById('loadMore');
+            if (filteredItems.length <= 8) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'block';
+                loadMoreBtn.setAttribute('data-filtered-items', JSON.stringify(filteredItems));
+                loadMoreBtn.setAttribute('data-current-count', 8);
+            }
+        }
+        
+        // Function to load more items
+        function loadMoreItems() {
+            const loadMoreBtn = document.getElementById('loadMore');
+            const filteredItems = JSON.parse(loadMoreBtn.getAttribute('data-filtered-items'));
+            let currentCount = parseInt(loadMoreBtn.getAttribute('data-current-count'));
+            
+            const nextItems = filteredItems.slice(currentCount, currentCount + 4);
+            const container = document.getElementById('imageGallery');
+            
+            nextItems.forEach(item => {
+                const statusClass = item.status === 'found' ? 'status-found' : 
+                                  item.status === 'lost' ? 'status-lost' : 'status-claimed';
+                
+                const statusText = item.status === 'found' ? 'Found' : 
+                                 item.status === 'lost' ? 'Lost' : 'Claimed';
+                
+                const itemElement = document.createElement('div');
+                itemElement.className = 'image-card';
+                itemElement.setAttribute('data-category', item.category);
+                itemElement.setAttribute('data-status', item.status);
+                
+                itemElement.innerHTML = `
+                    <div class="image-container">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="image-overlay">
+                            <button class="view-btn" data-id="${item.id}">View Details</button>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <h3>${item.name}</h3>
+                        <div class="image-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> ${item.location}</span>
+                            <span><i class="fas fa-calendar-alt"></i> ${formatDate(item.date)}</span>
+                        </div>
+                        <span class="image-status ${statusClass}">${statusText}</span>
+                    </div>
+                `;
+                
+                container.appendChild(itemElement);
+            });
+            
+            // Update current count
+            currentCount += nextItems.length;
+            loadMoreBtn.setAttribute('data-current-count', currentCount);
+            
+            // Hide button if all items are loaded
+            if (currentCount >= filteredItems.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+            
+            // Reattach event listeners to new view buttons
+            document.querySelectorAll('.view-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const itemId = parseInt(this.getAttribute('data-id'));
+                    openModal(itemId);
+                });
+            });
+        }
+        
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize gallery
+            filterItems();
+            
+            // Filter button click events
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    filterItems();
+                });
+            });
+            
+            // Load more button
+            document.getElementById('loadMore').addEventListener('click', loadMoreItems);
+            
+            // Close modal
+            document.getElementById('closeModal').addEventListener('click', function() {
+                document.getElementById('imageModal').classList.remove('active');
+            });
+            
+            // Close modal when clicking outside
+            document.getElementById('imageModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                }
+            });
+            
+            // Mobile menu toggle
+            document.querySelector('.header-dropdown').addEventListener('click', function() {
+                const navLinks = document.querySelector('.nav-links ul');
+                if (navLinks.style.display === 'flex') {
+                    navLinks.style.display = 'none';
+                } else {
+                    navLinks.style.display = 'flex';
+                    navLinks.style.flexDirection = 'column';
+                    navLinks.style.position = 'absolute';
+                    navLinks.style.top = '100px';
+                    navLinks.style.left = '0';
+                    navLinks.style.width = '100%';
+                    navLinks.style.backgroundColor = 'var(--white)';
+                    navLinks.style.padding = '1rem';
+                    navLinks.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+                }
+            });
+        });
     </script>
 </body>
 </html>

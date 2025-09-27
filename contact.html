@@ -3,112 +3,787 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>Contact Us - Digital Solution for Lost and Found</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #ff6b35;
+            --accent: #2a9d8f;
+            --light: #f5f7fa;
+            --dark: #333;
+            --white: #ffffff;
+            --gray: #95a5a6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--light);
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        
+        /* Header Styles */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--white);
+            height: 100px;
+            padding: 0 5%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo img {
+            height: 70px;
+            width: auto;
+        }
+        
+        .nav-links ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--secondary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .header-button {
+            background-color: var(--secondary);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .header-button:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .header-dropdown {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .contact-hero {
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('images/contact-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 5% 5%;
+            text-align: center;
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .contact-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .contact-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 5% 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .contact-info {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        
+        .contact-info h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            color: var(--dark);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 107, 53, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+        
+        .contact-text h4 {
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-text p {
+            margin: 0;
+            color: var(--dark);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .contact-form-container {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-form-container h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--secondary);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 5% 5%;
+            background-color: var(--white);
+        }
+        
+        .faq-section h2 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            background-color: var(--light);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background-color: rgba(46, 204, 113, 0.1);
+            border: 1px solid #2ecc71;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .success-message i {
+            font-size: 3rem;
+            color: #2ecc71;
+            margin-bottom: 1rem;
+        }
+        
+        .success-message h3 {
+            color: #2ecc71;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 3rem 5% 1rem;
+            margin-top: 5rem;
+        }
+        
+        .footer-contents {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contents h6 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .contents p, .contents a {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .contents a:hover {
+            color: var(--secondary);
+        }
+        
+        .list {
+            list-style: none;
+        }
+        
+        .list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .list a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .list a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .content-image {
+            max-width: 80px;
+            height: auto;
+        }
+        
+        .bottom-bar {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 3%;
+            }
+            
+            .nav-links ul {
+                display: none;
+            }
+            
+            .header-dropdown {
+                display: block;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-info, .contact-form-container {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .contact-info h2, .contact-form-container h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Animation */
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-     <header>
-        <nav>
-            <div class="header-container">
-                <div class="logo">
-                    <a href="#">
-                    </a><img src="images/logo images.png" height="80px" width="80px" data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">
-                 </a>
-                </div>
-                <div  class="nav-links">
-                    <ul data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">
-                        <li>  <a href="index.html" class="active">Home</a></li>
-                        <li> <a href="reportloss.html">Report Lost</a></li>
-                        <li> <a href="reportfound.html">Report Found</a></li>
-                        <li><a href="community.html">Community</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-                </div>
-                    <a href="signout.html" class="header-button" data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">Sign out</a>
+    <header>
+        <nav class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo images.png" alt="Logo" data-aos="fade-down-right" data-aos-duration="1000">
+                </a>
             </div>
+            <div class="nav-links">
+                <ul data-aos="fade-down-right" data-aos-duration="1000">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lost.html">Report Lost</a></li>
+                    <li><a href="reportfound.html">Report Found</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="header-dropdown">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            <a href="#" class="header-button" data-aos="fade-down-right" data-aos-duration="1000">Sign out</a>
         </nav>
     </header>
-        <div class="contact-header">
-            <h1 >LOST OR FOUND? REACH OUT TO US FOR ASSITANECE</h1>
-            <p>We`re here to help! Use the form below to reach out, whether it`s about a lost item, feedback or general inquires</p>
-        </div>
-
-    <section class="contact-container">
-         <div class="img-00">
-                       <img src="images/Illustration.jpeg" width="700px" height="550px" >
-                  </div>
-
-            <div class="contact-section">
-            <form class="contact-form" action="#" method="post">
-                <label for="name">Full Name</label>
-                <input type="text" name="name" required>
-                <label for="Phone number">Phone Number</label>
-                <input type="number" name="number" required>
-                <label for="email">Email Address</label>
-                <input type="email" name="email"  id="email" required>
-                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="button">Send Message</button>
-            </form>
-            </div>
+    
+    <section class="contact-hero fade-in">
+        <h1>Lost or Found? Reach Out to Us for Assistance</h1>
+        <p>We're here to help! Use the form below to reach out, whether it's about a lost item, feedback or general inquiries.</p>
     </section>
-
-    <footer>
-     <div class="footer-contents">
-            <div class="contents">
-                <h6 data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">CONTACT US</h6>
-                <p> Contact Us:<a href="mailto:zohsynthia50@gmail.com">
-                    zohsynthia50@gmail.com</a>
-                <a href="mailto: cynthiazoh300@gmail.com"> cynthiazoh300@gmail.com</a>
-                </p>
-                 <p><span>Tell:</span>653 07 80 80</p>
-                 <p>BAMENDA,CAMEROON</p>
+    
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info fade-in">
+                <h2>Get In Touch</h2>
+                <p>Have questions about our services or need assistance with a lost or found item? We're here to help. Reach out to us through any of the following channels.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Our Location</h4>
+                            <p>Bamenda, Cameroon</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone Number</h4>
+                            <p>+237 653 07 80 80</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email Address</h4>
+                            <p>zohsynthia50@gmail.com</p>
+                            <p>cynthiazoh300@gmail.com</p>
+                        </div>
+                    </div>
                 </div>
-
-                   <div class="contents">
-                <h6 data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000"> QUICK LINKS</h6>
-                <ul class="list">
-                    <li><a href="lost.html">lost</a></li>
-                      <li><a href="found.html">found</a></li>
-                       <li><a href="reportlost.html">reportloss</a></li>
-                        <li><a href="reportfound.html">reportfound</a></li>
-                </ul>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://github.com/Synthia-50zoh" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
             </div>
             
-                 <div class="contents">
-                <h6 data-aos="fade-down-right"
-              data-aos-duration="1000"data-aos="fade-down-right"
-              data-aos-duration="1000">FOLLOW US</h6>
+            <div class="contact-form-container fade-in">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Your phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Your email address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" class="form-control" required>
+                            <option value="">Select a subject</option>
+                            <option>Report a Lost Item</option>
+                            <option>Report a Found Item</option>
+                            <option>General Inquiry</option>
+                            <option>Technical Support</option>
+                            <option>Feedback</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Please provide details about your inquiry" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for contacting us. We'll get back to you as soon as possible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq-section">
+        <h2 class="fade-in">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item fade-in">
+                <div class="faq-question">
+                    <span>How long does it take to recover a lost item?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>The time it takes to recover a lost item varies depending on several factors such as how quickly it's reported, the item's distinctiveness, and whether someone has found it. On average, items are recovered within 3-7 days when reported promptly.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item fade-in">
+                <div class="faq-question">
+                    <span>Is there a fee for using your service?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>No, our basic service is completely free. We believe in helping people reconnect with their lost items without financial barriers. However, we may introduce premium features in the future that could have associated costs.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item fade-in">
+                <div class="faq-question">
+                    <span>What should I do if I find an item?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>If you find an item, please report it through our "Report Found" form with as much detail as possible. Include photos if you can. This helps the rightful owner identify their property. We'll guide you through the process of safely returning the item.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item fade-in">
+                <div class="faq-question">
+                    <span>How can I verify that an item belongs to me?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>When claiming an item, we recommend providing specific details that only the owner would know, such as unique markings, contents, or serial numbers. For valuable items, we may facilitate a secure meeting with our team present to verify ownership.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item fade-in">
+                <div class="faq-question">
+                    <span>What areas in Cameroon do you cover?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We currently operate in major cities across Cameroon including Bamenda, Douala, Yaoundé, Buea, and Limbe. Our services are expanding to cover more regions. Even if you're outside these areas, you can still use our platform to report lost or found items.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-contents">
+            <div class="contents">
+                <h6 data-aos="fade-down-right" data-aos-duration="1000">CONTACT US</h6>
+                <p>Email: <a href="mailto:zohsynthia50@gmail.com">zohsynthia50@gmail.com</a></p>
+                <p>Email: <a href="mailto:cynthiazoh300@gmail.com">cynthiazoh300@gmail.com</a></p>
+                <p>Phone: 653 07 80 80</p>
+                <p>BAMENDA, CAMEROON</p>
+            </div>
+            <div class="contents">
+                <h6 data-aos="fade-down-right" data-aos-duration="1000">QUICK LINKS</h6>
+                <ul class="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="reportloss.html">Report Lost</a></li>
+                    <li><a href="reportfound.html">Report Found</a></li>
+                    <li><a href="community.html">Community</a></li>
+                </ul>
+            </div>
+            <div class="contents">
+                <h6 data-aos="fade-down-right" data-aos-duration="1000">FOLLOW US</h6>
                 <ul class="social-icons">
-                    <li><a href=""> <i class=" fa-brands fa-whatsapp"></i></a></li>
-                    <li> <a href=""><i class="fa-brands fa-facebook"></i></a> </li>
-                    <li><a href=""><i class="fa-brands fa-tiktok"></i></a> </li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
                     <li><a href="https://github.com/Synthia-50zoh"><i class="fa-brands fa-github"></i></a></li>
                 </ul>
-                <img src="images/logo images.png" height="80px" width="80px" > 
+                <img src="images/logo images.png" alt="Logo" class="content-image">
             </div>
-            </div>
-            <div class="bottom-bar">
-                <p>&COPY; 2025 Digital Solution for Lost and Found Items in Cameroon. All right Reserved</p>
-            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2025 Digital Solution for Lost and Found Items in Cameroon. All rights Reserved</p>
+        </div>
     </footer>
-            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-</script>
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+        
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const requiredFields = this.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = 'red';
+                } else {
+                    field.style.borderColor = '#ddd';
+                }
+            });
+            
+            if (isValid) {
+                // In a real application, you would send the data to a server here
+                // For demonstration, we'll show a success message
+                
+                // Hide the form
+                this.style.display = 'none';
+                
+                // Show success message
+                document.getElementById('successMessage').style.display = 'block';
+                
+                // You could also reset the form after a delay
+                // setTimeout(() => {
+                //     this.reset();
+                //     this.style.display = 'block';
+                //     document.getElementById('successMessage').style.display = 'none';
+                // }, 5000);
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+        
+        // Mobile menu toggle
+        document.querySelector('.header-dropdown').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links ul');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100px';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.backgroundColor = 'var(--white)';
+                navLinks.style.padding = '1rem';
+                navLinks.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
 </body>
 </html>
