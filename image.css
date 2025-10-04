@@ -7,7 +7,7 @@ body {
     position: sticky;
     background-color: rgb(240, 240, 240);
     font-family: poppins, sans-serif;
-}
+/* }
 .header-container {
 display: flex; 
 justify-content: space-between;
@@ -43,7 +43,7 @@ background-color: white;
     margin-right: 8rem;
 }
 .header-button:hover{
-    background-color: black;
+    background-color: black; */
 }
 .image-grid{
     display: grid;

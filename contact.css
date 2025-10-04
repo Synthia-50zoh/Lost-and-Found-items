@@ -9,6 +9,7 @@ body {
     background-color: rgb(240, 240, 240);
     font-family: poppins, sans-serif;
 }
+/* }
 .header-container {
     position: sticky;
     display: flex;
@@ -50,7 +51,7 @@ body {
 }
 .header-button:hover{
     background-color: black;
-}
+} */
 
 .contact-header{
       max-width: 1200px;

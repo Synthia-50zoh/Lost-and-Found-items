@@ -21,8 +21,8 @@
             line-height: 1.6;
             color: var(--dark);
         }
-        
-        /* Header Styles */
+/*         
+        Header Styles
         .header-container {
             display: flex;
             justify-content: space-between;
@@ -90,7 +90,7 @@
         
         .header-button:hover {
             background-color: var(--primary);
-            transform: translateY(-2px);
+            transform: translateY(-2px); 
         }
         
         .header-dropdown {

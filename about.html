@@ -1,196 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - Digital Solution for Lost and Found</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="about.css">
-</head>
-<body>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="header.css" />
+  </head>
+  <body>
     <header>
-        <nav class="header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo images.png" alt="Logo">
-                </a>
-            </div>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="reportloss.html">Report Lost</a></li>
-                    <li><a href="reportfound.html">Report Found</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="header-dropdown">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </div>
-            <a href="index.html" class="header-button">Sign out</a>
-        </nav>
+      <nav class="header-container">
+        <div class="logo">
+          <a href="#">
+            <img
+              src="images/logo images.png"
+              alt="Logo"
+              data-aos="fade-down-right"
+              data-aos-duration="1000"
+            />
+          </a>
+        </div>
+        <div class="nav-links">
+          <div class="links">
+            <ul data-aos="fade-down-right" data-aos-duration="1000">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="lost.html">Report Lost</a></li>
+              <li><a href="reportfound.html">Report Found</a></li>
+              <li><a href="community.html">Community</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </div>
+          <div class="header-dropdown">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+          <div class="signout-btn">
+            <a href="signout.html"
+              class="header-button"
+              data-aos="fade-down-right"
+              data-aos-duration="1000"
+              >Sign out</a
+            >
+          </div>
+        </div>
+      </nav>
     </header>
-    
-    <section class="about-hero fade-in-up">
-        <h1>About Us</h1>
-        <p>Connecting lost items with their owners across Cameroon</p>
-    </section>
-    
-    <section class="about-intro fade-in-up delay-1">
-        <h2>Our Story</h2>
-        <p>Our platform bridges the gap between lost and found items in Cameroon, providing a digital space where people can report lost items, find recovered belongings, and connect with others. We aim to create a seamless and efficient experience, reuniting individuals with their lost possessions and fostering a sense of community and trust.</p>
-    </section>
-    
-    <section class="values-section">
-        <h2 class="fade-in-up">Our Values</h2>
-        <div class="values-grid">
-            <div class="value-card fade-in-up delay-1">
-                <div class="value-icon">
-                    <i class="fas fa-bullseye"></i>
-                </div>
-                <h3>Mission</h3>
-                <p>Our mission is to provide a reliable and efficient digital platform for lost and found items in Cameroon, bridging the gap between individuals and their belongings, while fostering a sense of community and trust.</p>
-            </div>
-            
-            <div class="value-card fade-in-up delay-2">
-                <div class="value-icon">
-                    <i class="fas fa-eye"></i>
-                </div>
-                <h3>Vision</h3>
-                <p>Our vision is to become the go-to platform for lost and found items in Cameroon, leveraging technology to create a more connected and organized society where people can easily recover their lost items and return found ones to their rightful owners.</p>
-            </div>
-            
-            <div class="value-card fade-in-up delay-3">
-                <div class="value-icon">
-                    <i class="fas fa-handshake"></i>
-                </div>
-                <h3>Values</h3>
-                <p>Integrity: We prioritize transparency and honesty in all our interactions. Community: We believe in the power of community and strive to create a platform that brings people together. Efficiency: We're committed to providing a seamless and efficient experience for our users.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="team-section">
-        <h2 class="fade-in-up">Our Team</h2>
-        <div class="team-grid">
-            <div class="team-member fade-in-up delay-1">
-                <img src="images/team1.jpg" alt="Team Member" class="member-photo">
-                <h3>Cynthia Zoh</h3>
-                <p class="role">Founder & CEO</p>
-                <p>Passionate about creating solutions that make a difference in people's lives.</p>
-            </div>
-            
-            <div class="team-member fade-in-up delay-2">
-                <img src="images/team2.jpg" alt="Team Member" class="member-photo">
-                <h3>Riphat Nfor</h3>
-                <p class="role">Technical Lead</p>
-                <p>Software engineer dedicated to building robust and user-friendly platforms.</p>
-            </div>
-            
-            <div class="team-member fade-in-up delay-3">
-                <img src="images/team3.jpg" alt="Team Member" class="member-photo">
-                <h3>Blessing Tanyi</h3>
-                <p class="role">Community Manager</p>
-                <p>Ensuring our community remains engaged and supported throughout their journey.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="stats-section fade-in-up">
-        <h2>Our Impact</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <div class="stat-number">1,250+</div>
-                <div class="stat-label">Items Reunited</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">5,000+</div>
-                <div class="stat-label">Community Members</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">12</div>
-                <div class="stat-label">Cities Covered</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">98%</div>
-                <div class="stat-label">Satisfaction Rate</div>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="footer-contents">
-            <div class="contents">
-                <h6>CONTACT US</h6>
-                <p>Email: <a href="mailto:zohsynthia50@gmail.com">zohsynthia50@gmail.com</a></p>
-                <p>Email: <a href="mailto:cynthiazoh300@gmail.com">cynthiazoh300@gmail.com</a></p>
-                <p>Phone: 653 07 80 80</p>
-                <p>BAMENDA, CAMEROON</p>
-            </div>
-            <div class="contents">
-                <h6>QUICK LINKS</h6>
-                <ul class="list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="reportloss.html">Report Lost</a></li>
-                    <li><a href="reportfound.html">Report Found</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                </ul>
-            </div>
-            <div class="contents">
-                <h6>FOLLOW US</h6>
-                <ul class="social-icons">
-                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-                    <li><a href="https://github.com/Synthia-50zoh"><i class="fa-brands fa-github"></i></a></li>
-                </ul>
-                <img src="images/logo images.png" alt="Logo" class="content-image">
-            </div>
-        </div>
-        <div class="bottom-bar">
-            <p>&copy; 2025 Digital Solution for Lost and Found Items in Cameroon. All rights Reserved</p>
-        </div>
-    </footer>
 
+    <section class="about-hero fade-in-up">
+      <h1>About Us</h1>
+      <p>Connecting lost items with their owners across Cameroon</p>
+    </section>
+
+    <section class="about-intro fade-in-up delay-1">
+      <h2>Our Story</h2>
+      <p>
+        Our platform bridges the gap between lost and found items in Cameroon,
+        providing a digital space where people can report lost items, find
+        recovered belongings, and connect with others. We aim to create a
+        seamless and efficient experience, reuniting individuals with their lost
+        possessions and fostering a sense of community and trust.
+      </p>
+    </section>
+
+    <section class="values-section">
+      <h2 class="fade-in-up">Our Values</h2>
+      <div class="values-grid">
+        <div class="value-card fade-in-up delay-1">
+          <div class="value-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Mission</h3>
+          <p>
+            Our mission is to provide a reliable and efficient digital platform
+            for lost and found items in Cameroon, bridging the gap between
+            individuals and their belongings, while fostering a sense of
+            community and trust.
+          </p>
+        </div>
+
+        <div class="value-card fade-in-up delay-2">
+          <div class="value-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3>Vision</h3>
+          <p>
+            Our vision is to become the go-to platform for lost and found items
+            in Cameroon, leveraging technology to create a more connected and
+            organized society where people can easily recover their lost items
+            and return found ones to their rightful owners.
+          </p>
+        </div>
+
+        <div class="value-card fade-in-up delay-3">
+          <div class="value-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3>Values</h3>
+          <p>
+            Integrity: We prioritize transparency and honesty in all our
+            interactions. Community: We believe in the power of community and
+            strive to create a platform that brings people together. Efficiency:
+            We're committed to providing a seamless and efficient experience for
+            our users.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="team-section">
+      <h2 class="fade-in-up">Our Team</h2>
+      <div class="team-grid">
+        <div class="team-member fade-in-up delay-1">
+          <img src="images/team1.jpg" alt="Team Member" class="member-photo" />
+          <h3>Cynthia Zoh</h3>
+          <p class="role">Founder & CEO</p>
+          <p>
+            Passionate about creating solutions that make a difference in
+            people's lives.
+          </p>
+        </div>
+
+        <div class="team-member fade-in-up delay-2">
+          <img src="images/team2.jpg" alt="Team Member" class="member-photo" />
+          <h3>Riphat Nfor</h3>
+          <p class="role">Technical Lead</p>
+          <p>
+            Software engineer dedicated to building robust and user-friendly
+            platforms.
+          </p>
+        </div>
+
+        <div class="team-member fade-in-up delay-3">
+          <img src="images/team3.jpg" alt="Team Member" class="member-photo" />
+          <h3>Blessing Tanyi</h3>
+          <p class="role">Community Manager</p>
+          <p>
+            Ensuring our community remains engaged and supported throughout
+            their journey.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section fade-in-up">
+      <h2>Our Impact</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">1,250+</div>
+          <div class="stat-label">Items Reunited</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5,000+</div>
+          <div class="stat-label">Community Members</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">12</div>
+          <div class="stat-label">Cities Covered</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Satisfaction Rate</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-contents">
+        <div class="contents">
+          <h6>CONTACT US</h6>
+          <p>
+            Email:
+            <a href="mailto:zohsynthia50@gmail.com">zohsynthia50@gmail.com</a>
+          </p>
+          <p>
+            Email:
+            <a href="mailto:cynthiazoh300@gmail.com">cynthiazoh300@gmail.com</a>
+          </p>
+          <p>Phone: 653 07 80 80</p>
+          <p>BAMENDA, CAMEROON</p>
+        </div>
+        <div class="contents">
+          <h6>QUICK LINKS</h6>
+          <ul class="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reportloss.html">Report Lost</a></li>
+            <li><a href="reportfound.html">Report Found</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="contents">
+          <h6>FOLLOW US</h6>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/Synthia-50zoh"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+          </ul>
+          <img src="images/logo images.png" alt="Logo" class="content-image" />
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <p>
+          &copy; 2025 Digital Solution for Lost and Found Items in Cameroon. All
+          rights Reserved
+        </p>
+      </div>
+    </footer>
+<!--     
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Mobile menu toggle
-        document.querySelector('.header-dropdown').addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links ul');
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100px';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.backgroundColor = 'var(--white)';
-                navLinks.style.padding = '1rem';
-                navLinks.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
-            }
+      AOS.init();  -->
+
+
+<script>
+      // Mobile menu toggle
+      document
+        .querySelector(".header-dropdown")
+        .addEventListener("click", function () {
+          const navLinks = document.querySelector(".nav-links ul");
+          if (navLinks.style.display === "flex") {
+            navLinks.style.display = "none";
+          } else {
+            navLinks.style.display = "flex";
+            navLinks.style.flexDirection = "column";
+            navLinks.style.position = "absolute";
+            navLinks.style.top = "100px";
+            navLinks.style.left = "0";
+            navLinks.style.width = "100%";
+            navLinks.style.backgroundColor = "var(--white)";
+            navLinks.style.padding = "1rem";
+            navLinks.style.boxShadow = "0 5px 10px rgba(0,0,0,0.1)";
+          }
         });
-        
-        // Animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-        
-        // Observe elements with animation classes
-        document.querySelectorAll('.fade-in-up').forEach(el => {
-            observer.observe(el);
+
+      // Animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = "running";
+            observer.unobserve(entry.target);
+          }
         });
+      }, observerOptions);
+
+      // Observe elements with animation classes
+      document.querySelectorAll(".fade-in-up").forEach((el) => {
+        observer.observe(el);
+      });
     </script>
-</body>
+  </body>
 </html>
