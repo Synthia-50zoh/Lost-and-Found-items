@@ -625,7 +625,8 @@
             
             <div class="contact-form-container fade-in">
                 <h2>Send Us a Message</h2>
-                <form id="contactForm">
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                     <input type="hidden" name="access_key" value="e7620477-2341-4937-8abb-bf83eafa85c0">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required>
@@ -765,51 +766,51 @@
         // Initialize AOS
         AOS.init();
         
-        // FAQ functionality
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                item.classList.toggle('active');
-            });
-        });
+        // // FAQ functionality
+        // document.querySelectorAll('.faq-question').forEach(question => {
+        //     question.addEventListener('click', () => {
+        //         const item = question.parentElement;
+        //         item.classList.toggle('active');
+        //     });
+        // });
         
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // // Form submission handler
+        // document.getElementById('contactForm').addEventListener('submit', function(e) {
+        //     e.preventDefault();
             
-            // Basic form validation
-            const requiredFields = this.querySelectorAll('[required]');
-            let isValid = true;
+        //     // Basic form validation
+        //     const requiredFields = this.querySelectorAll('[required]');
+        //     let isValid = true;
             
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    isValid = false;
-                    field.style.borderColor = 'red';
-                } else {
-                    field.style.borderColor = '#ddd';
-                }
-            });
+        //     requiredFields.forEach(field => {
+        //         if (!field.value.trim()) {
+        //             isValid = false;
+        //             field.style.borderColor = 'red';
+        //         } else {
+        //             field.style.borderColor = '#ddd';
+        //         }
+        //     });
             
-            if (isValid) {
-                // In a real application, you would send the data to a server here
-                // For demonstration, we'll show a success message
+        //     if (isValid) {
+        //         // In a real application, you would send the data to a server here
+        //         // For demonstration, we'll show a success message
                 
-                // Hide the form
-                this.style.display = 'none';
+        //         // Hide the form
+        //         this.style.display = 'none';
                 
-                // Show success message
-                document.getElementById('successMessage').style.display = 'block';
+        //         // Show success message
+        //         document.getElementById('successMessage').style.display = 'block';
                 
-                // You could also reset the form after a delay
-                // setTimeout(() => {
-                //     this.reset();
-                //     this.style.display = 'block';
-                //     document.getElementById('successMessage').style.display = 'none';
-                // }, 5000);
-            } else {
-                alert('Please fill in all required fields.');
-            }
-        });
+        //         // You could also reset the form after a delay
+        //         // setTimeout(() => {
+        //         //     this.reset();
+        //         //     this.style.display = 'block';
+        //         //     document.getElementById('successMessage').style.display = 'none';
+        //         // }, 5000);
+        //     } else {
+        //         alert('Please fill in all required fields.');
+        //     }
+        // });
         
         // Mobile menu toggle
         document.querySelector('.header-dropdown').addEventListener('click', function() {

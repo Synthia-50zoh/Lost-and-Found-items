@@ -1,206 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Found Items - Digital Solution for Lost and Found</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="found.css">
-</head>
-<body>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/found.css" />
+  </head>
+  <body>
     <header>
-        <nav class="header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo images.png" alt="Logo" data-aos="fade-down-right" data-aos-duration="1000">
-                </a>
-            </div>
-            <div class="nav-links">
-                <ul data-aos="fade-down-right" data-aos-duration="1000">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="reportloss.html">Report Lost</a></li>
-                    <li><a href="reportfound.html" class="active">Report Found</a></li>
-                    <li><a href="community.html">Community</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="header-dropdown">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </div>
-            <!-- <a href="index.html" class="header-button" data-aos="fade-down-right" data-aos-duration="1000">Sign out</a> -->
-        </nav>
+      <nav class="header-container">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="images/logo images.png"
+              alt="Logo"
+              data-aos="fade-down-right"
+              data-aos-duration="1000"
+            />
+          </a>
+        </div>
+        <div class="nav-links">
+          <ul data-aos="fade-down-right" data-aos-duration="1000">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reportloss.html">Report Lost</a></li>
+            <li><a href="reportfound.html" class="active">Report Found</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="header-dropdown">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <!-- <a href="index.html" class="header-button" data-aos="fade-down-right" data-aos-duration="1000">Sign out</a> -->
+      </nav>
     </header>
-    
+
     <section class="found-hero fade-in">
-        <h1>Found Items</h1>
-        <p>Browse items that have been reported as found. Use filters to search by category, date, or location. If you recognize an item, follow the steps to claim it safely.</p>
+      <h1>Found Items</h1>
+      <p>
+        Browse items that have been reported as found. Use filters to search by
+        category, date, or location. If you recognize an item, follow the steps
+        to claim it safely.
+      </p>
     </section>
-    
+
     <section class="found-search-section fade-in-delay">
-        <div class="search-container">
-            <h2>Search Found Items</h2>
-            <form id="foundSearchForm" class="search-form">
-                <div class="form-group full-width">
-                    <label for="itemName">Item Name</label>
-                    <input type="text" id="itemName" name="itemName" class="form-control" placeholder="e.g. Black wallet, iPhone, Keys">
-                </div>
-                
-                <div class="form-group">
-                    <label for="category">Category</label>
-                    <select id="category" name="category" class="form-control">
-                        <option value="">All Categories</option>
-                        <option>Electronics</option>
-                        <option>Jewelry</option>
-                        <option>Documents</option>
-                        <option>Clothing</option>
-                        <option>Bags & Wallets</option>
-                        <option>Keys</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="location">Location Found</label>
-                    <input type="text" id="location" name="location" class="form-control" placeholder="e.g. Bamenda, Douala">
-                </div>
-                
-                <div class="form-group">
-                    <label for="date">Date Found</label>
-                    <input type="date" id="date" name="date" class="form-control">
-                </div>
-                
-                <button type="submit" class="search-btn">Search Found Items</button>
-            </form>
-        </div>
+      <div class="search-container">
+        <h2>Search Found Items</h2>
+        <form id="foundSearchForm" class="search-form">
+          <div class="form-group full-width">
+            <label for="itemName">Item Name</label>
+            <input
+              type="text"
+              id="itemName"
+              name="itemName"
+              class="form-control"
+              placeholder="e.g. Black wallet, iPhone, Keys"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category" class="form-control">
+              <option value="">All Categories</option>
+              <option>Electronics</option>
+              <option>Jewelry</option>
+              <option>Documents</option>
+              <option>Clothing</option>
+              <option>Bags & Wallets</option>
+              <option>Keys</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location Found</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              class="form-control"
+              placeholder="e.g. Bamenda, Douala"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="date">Date Found</label>
+            <input type="date" id="date" name="date" class="form-control" />
+          </div>
+
+          <button type="submit" class="search-btn">Search Found Items</button>
+        </form>
+      </div>
     </section>
-    
+
     <section class="results-section">
-        <h2>Recently Found Items</h2>
-        <div class="results-grid" id="foundItemsResults">
-            <!-- Results will be populated by JavaScript -->
-        </div>
+      <h2>Recently Found Items</h2>
+      <div class="results-grid" id="foundItemsResults">
+        <!-- Results will be populated by JavaScript -->
+      </div>
     </section>
-    
+
     <footer>
-        <div class="footer-contents">
-            <div class="contents">
-                <h6 data-aos="fade-down-right" data-aos-duration="1000">CONTACT US</h6>
-                <p>Email: <a href="mailto:zohsynthia50@gmail.com">zohsynthia50@gmail.com</a></p>
-                <p>Email: <a href="mailto:cynthiazoh300@gmail.com">cynthiazoh300@gmail.com</a></p>
-                <p>Phone: 653 07 80 80</p>
-                <p>BAMENDA, CAMEROON</p>
-            </div>
-            <div class="contents">
-                <h6 data-aos="fade-down-right" data-aos-duration="1000">QUICK LINKS</h6>
-                <ul class="list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="reportloss.html">Report Lost</a></li>
-                    <li><a href="reportfound.html">Report Found</a></li>
-                    <li><a href="community.html">Community</a></li>
-                </ul>
-            </div>
-            <div class="contents">
-                <h6 data-aos="fade-down-right" data-aos-duration="1000">FOLLOW US</h6>
-                <ul class="social-icons">
-                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-                    <li><a href="https://github.com/Synthia-50zoh"><i class="fa-brands fa-github"></i></a></li>
-                </ul>
-                <img src="images/logo images.png" alt="Logo" class="content-image">
-            </div>
+      <div class="footer-contents">
+        <div class="contents">
+          <h6 data-aos="fade-down-right" data-aos-duration="1000">
+            CONTACT US
+          </h6>
+          <p>
+            Email:
+            <a href="mailto:zohsynthia50@gmail.com">zohsynthia50@gmail.com</a>
+          </p>
+          <p>
+            Email:
+            <a href="mailto:cynthiazoh300@gmail.com">cynthiazoh300@gmail.com</a>
+          </p>
+          <p>Phone: 653 07 80 80</p>
+          <p>BAMENDA, CAMEROON</p>
         </div>
-        <div class="bottom-bar">
-            <p>&copy; 2025 Digital Solution for Lost and Found Items in Cameroon. All rights Reserved</p>
+        <div class="contents">
+          <h6 data-aos="fade-down-right" data-aos-duration="1000">
+            QUICK LINKS
+          </h6>
+          <ul class="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reportloss.html">Report Lost</a></li>
+            <li><a href="reportfound.html">Report Found</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
         </div>
+        <div class="contents">
+          <h6 data-aos="fade-down-right" data-aos-duration="1000">FOLLOW US</h6>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/Synthia-50zoh"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+          </ul>
+          <img src="images/logo images.png" alt="Logo" class="content-image" />
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <p>
+          &copy; 2025 Digital Solution for Lost and Found Items in Cameroon. All
+          rights Reserved
+        </p>
+      </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS
-        AOS.init();
-        
-        // Sample data for found items
-        const foundItems = [
-            {
-                id: 1,
-                name: "Black Leather Wallet",
-                category: "Bags & Wallets",
-                location: "Bamenda",
-                date: "2025-05-28",
-                description: "Found near the main market. Contains identification cards and some cash.",
-                image: "images/wallet.jpg"
-            },
-            {
-                id: 2,
-                name: "iPhone 12 Pro",
-                category: "Electronics",
-                location: "Douala",
-                date: "2025-05-25",
-                description: "Found in a taxi near the airport. Black case with a cracked screen protector.",
-                image: "images/iphone.jpg"
-            },
-            {
-                id: 3,
-                name: "Silver Bracelet",
-                category: "Jewelry",
-                location: "Yaounde",
-                date: "2025-05-20",
-                description: "Delicate silver bracelet with a heart charm. Found at a restaurant.",
-                image: "images/bracelet.jpg"
-            },
-            {
-                id: 4,
-                name: "Student ID Card",
-                category: "Documents",
-                location: "Buea",
-                date: "2025-05-15",
-                description: "University of Buea student ID found near the campus library.",
-                image: "images/id-card.jpg"
-            },
-            {
-                id: 5,
-                name: "Set of Keys",
-                category: "Keys",
-                location: "Bamenda",
-                date: "2025-05-10",
-                description: "Found near the commercial avenue. Includes car key and several house keys.",
-                image: "images/keys.jpg"
-            },
-            {
-                id: 6,
-                name: "Blue Backpack",
-                category: "Bags & Wallets",
-                location: "Douala",
-                date: "2025-05-05",
-                description: "Navy blue backpack with laptop compartment. Found at a bus station.",
-                image: "images/backpack.jpg"
-            }
-        ];
-        
-        // Function to display found items
-        function displayFoundItems(items) {
-            const resultsContainer = document.getElementById('foundItemsResults');
-            resultsContainer.innerHTML = '';
-            
-            if (items.length === 0) {
-                resultsContainer.innerHTML = `
+      // Initialize AOS
+      AOS.init();
+
+      // Sample data for found items
+      const foundItems = [
+        {
+          id: 1,
+          name: "Black Leather Wallet",
+          category: "Bags & Wallets",
+          location: "Bamenda",
+          date: "2025-05-28",
+          description:
+            "Found near the main market. Contains identification cards and some cash.",
+          image: "images/wallet.jpg",
+        },
+        {
+          id: 2,
+          name: "iPhone 12 Pro",
+          category: "Electronics",
+          location: "Douala",
+          date: "2025-05-25",
+          description:
+            "Found in a taxi near the airport. Black case with a cracked screen protector.",
+          image: "images/iphone.jpg",
+        },
+        {
+          id: 3,
+          name: "Silver Bracelet",
+          category: "Jewelry",
+          location: "Yaounde",
+          date: "2025-05-20",
+          description:
+            "Delicate silver bracelet with a heart charm. Found at a restaurant.",
+          image: "images/bracelet.jpg",
+        },
+        {
+          id: 4,
+          name: "Student ID Card",
+          category: "Documents",
+          location: "Buea",
+          date: "2025-05-15",
+          description:
+            "University of Buea student ID found near the campus library.",
+          image: "images/id-card.jpg",
+        },
+        {
+          id: 5,
+          name: "Set of Keys",
+          category: "Keys",
+          location: "Bamenda",
+          date: "2025-05-10",
+          description:
+            "Found near the commercial avenue. Includes car key and several house keys.",
+          image: "images/keys.jpg",
+        },
+        {
+          id: 6,
+          name: "Blue Backpack",
+          category: "Bags & Wallets",
+          location: "Douala",
+          date: "2025-05-05",
+          description:
+            "Navy blue backpack with laptop compartment. Found at a bus station.",
+          image: "images/backpack.jpg",
+        },
+      ];
+
+      // Function to display found items
+      function displayFoundItems(items) {
+        const resultsContainer = document.getElementById("foundItemsResults");
+        resultsContainer.innerHTML = "";
+
+        if (items.length === 0) {
+          resultsContainer.innerHTML = `
                     <div class="no-results">
                         <i class="fas fa-search"></i>
                         <h3>No items found</h3>
                         <p>Try adjusting your search criteria or check back later for new found items.</p>
                     </div>
                 `;
-                return;
-            }
-            
-            items.forEach(item => {
-                const itemElement = document.createElement('div');
-                itemElement.className = 'result-card';
-                itemElement.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}" class="result-image">
+          return;
+        }
+
+        items.forEach((item) => {
+          const itemElement = document.createElement("div");
+          itemElement.className = "result-card";
+          itemElement.innerHTML = `
+                    <img src="${item.image}" alt="${
+            item.name
+          }" class="result-image">
                     <div class="result-content">
                         <h3 class="result-title">${item.name}</h3>
                         <div class="result-meta">
@@ -219,61 +277,72 @@
                         <a href="#" class="claim-btn">Claim This Item</a>
                     </div>
                 `;
-                resultsContainer.appendChild(itemElement);
-            });
-        }
-        
-        // Function to format date
-        function formatDate(dateString) {
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            return new Date(dateString).toLocaleDateString(undefined, options);
-        }
-        
-        // Function to filter items based on search criteria
-        function filterItems() {
-            const itemName = document.getElementById('itemName').value.toLowerCase();
-            const category = document.getElementById('category').value;
-            const location = document.getElementById('location').value.toLowerCase();
-            const date = document.getElementById('date').value;
-            
-            const filteredItems = foundItems.filter(item => {
-                const matchesName = item.name.toLowerCase().includes(itemName);
-                const matchesCategory = !category || item.category === category;
-                const matchesLocation = !location || item.location.toLowerCase().includes(location);
-                const matchesDate = !date || item.date === date;
-                
-                return matchesName && matchesCategory && matchesLocation && matchesDate;
-            });
-            
-            displayFoundItems(filteredItems);
-        }
-        
-        // Event listener for form submission
-        document.getElementById('foundSearchForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            filterItems();
+          resultsContainer.appendChild(itemElement);
         });
-        
-        // Event listener for mobile menu toggle
-        document.querySelector('.header-dropdown').addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links ul');
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100px';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.backgroundColor = 'var(--white)';
-                navLinks.style.padding = '1rem';
-                navLinks.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
-            }
+      }
+
+      // Function to format date
+      function formatDate(dateString) {
+        const options = { year: "numeric", month: "long", day: "numeric" };
+        return new Date(dateString).toLocaleDateString(undefined, options);
+      }
+
+      // Function to filter items based on search criteria
+      function filterItems() {
+        const itemName = document
+          .getElementById("itemName")
+          .value.toLowerCase();
+        const category = document.getElementById("category").value;
+        const location = document
+          .getElementById("location")
+          .value.toLowerCase();
+        const date = document.getElementById("date").value;
+
+        const filteredItems = foundItems.filter((item) => {
+          const matchesName = item.name.toLowerCase().includes(itemName);
+          const matchesCategory = !category || item.category === category;
+          const matchesLocation =
+            !location || item.location.toLowerCase().includes(location);
+          const matchesDate = !date || item.date === date;
+
+          return (
+            matchesName && matchesCategory && matchesLocation && matchesDate
+          );
         });
-        
-        // Initialize with all items displayed
-        displayFoundItems(foundItems);
+
+        displayFoundItems(filteredItems);
+      }
+
+      // Event listener for form submission
+      document
+        .getElementById("foundSearchForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          filterItems();
+        });
+
+      // Event listener for mobile menu toggle
+      document
+        .querySelector(".header-dropdown")
+        .addEventListener("click", function () {
+          const navLinks = document.querySelector(".nav-links ul");
+          if (navLinks.style.display === "flex") {
+            navLinks.style.display = "none";
+          } else {
+            navLinks.style.display = "flex";
+            navLinks.style.flexDirection = "column";
+            navLinks.style.position = "absolute";
+            navLinks.style.top = "100px";
+            navLinks.style.left = "0";
+            navLinks.style.width = "100%";
+            navLinks.style.backgroundColor = "var(--white)";
+            navLinks.style.padding = "1rem";
+            navLinks.style.boxShadow = "0 5px 10px rgba(0,0,0,0.1)";
+          }
+        });
+
+      // Initialize with all items displayed
+      displayFoundItems(foundItems);
     </script>
-</body>
+  </body>
 </html>
