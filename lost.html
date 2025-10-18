@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Report Lost Item - Digital Solution for Lost and Found</title>
+    <title>LOST FORM</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -13,6 +13,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="reportloss.css" />
+    <link rel="stylesheet" href="header.css" /> -->
+    <!-- <link rel="stylesheet" href="reportfound.css" /> -->
+
+    
     <style>
       :root {
         --primary: #0a192f;
@@ -600,11 +606,12 @@
         </div>
         <div class="nav-links">
           <ul data-aos="fade-down-right" data-aos-duration="1000">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="reportloss.html" class="active">Report Lost</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="lost.html">Report Loss</a></li>
             <li><a href="reportfound.html">Report Found</a></li>
             <li><a href="community.html">Community</a></li>
             <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="About.html">About Us</a></li>
             <a
               href="signout.html"
               class="header-button"
@@ -1046,7 +1053,7 @@
         });
 
       // Initialize with all found items displayed
-      displayFoundItems(
+       displayFoundItems( 
         foundItems,
         document.getElementById("foundItemsResults")
       );
@@ -1076,4 +1083,7 @@
         });
     </script>
   </body>
+</html>
+
+  </head>
 </html>
